@@ -4,22 +4,22 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>محمود خالد الترمسي | مطوّر Flutter وتطبيقات الموبايل — مصر</title>
+  <title>محمود خالد | مطوّر Flutter ومعلم برمجة</title>
   <meta name="description"
-    content="مطوّر Flutter محترف من مصر. أبني تطبيقات موبايل سريعة وجميلة لـ iOS وAndroid. خبرة +5 سنوات، +20 تطبيق مكتمل. تواصل الآن لبدء مشروعك." />
+    content="محمود خالد — مطوّر Flutter ومدرّس برمجة. أبني تطبيقات موبايل سريعة وجميلة وألهم الجيل القادم من المبرمجين." />
   <meta name="keywords"
-    content="مطوّر Flutter, تطوير تطبيقات, Flutter developer Egypt, mobile app developer, Dart, Firebase, تطبيقات موبايل, برمجة" />
-  <meta name="author" content="محمود خالد الترمسي" />
+    content="مطوّر Flutter, معلم برمجة, برمجة أطفال, تطوير تطبيقات, Flutter developer Egypt, mobile app developer" />
+  <meta name="author" content="محمود خالد" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://mahmoud-taramsi.dev" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="محمود خالد الترمسي | مطوّر Flutter" />
-  <meta property="og:description" content="أبني تطبيقات موبايل سريعة وجميلة. +5 سنوات خبرة، +20 تطبيق مكتمل." />
+  <meta property="og:title" content="محمود خالد | مطوّر Flutter ومعلم برمجة" />
+  <meta property="og:description" content="أبني تطبيقات موبايل عملية ومصمَّمة بعناية، وبعلّم الأطفال والمبتدئين بطريقة عملية وممتعة." />
   <meta property="og:url" content="https://mahmoud-taramsi.dev" />
   <meta property="og:locale" content="ar_EG" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="محمود خالد | Flutter Developer" />
-  <meta name="twitter:description" content="Building fast, beautiful mobile apps. Based in Egypt, building globally." />
+  <meta name="twitter:description" content="Building fast, beautiful mobile apps and inspiring the next generation." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -154,7 +154,7 @@
     }
 
     /* ════════════════════════════════════════════════════
-   4. VISITOR TYPE SELECTION (NEW - STEP 1)
+   4. VISITOR TYPE SELECTION
 ════════════════════════════════════════════════════ */
     #visitor-entry {
       position: fixed;
@@ -176,7 +176,6 @@
       pointer-events: none
     }
 
-    /* Animated background grid */
     #visitor-entry::before {
       content: '';
       position: absolute;
@@ -188,7 +187,6 @@
       animation: gridpulse 6s ease-in-out infinite;
     }
 
-    /* Ambient glow blobs */
     #visitor-entry::after {
       content: '';
       position: absolute;
@@ -200,15 +198,8 @@
     }
 
     @keyframes gridpulse {
-
-      0%,
-      100% {
-        opacity: .4
-      }
-
-      50% {
-        opacity: .8
-      }
+      0%, 100% { opacity: .4 }
+      50% { opacity: .8 }
     }
 
     .ve-inner {
@@ -223,7 +214,6 @@
       text-align: center;
     }
 
-    /* Logo / brand */
     .ve-logo {
       font-family: var(--ff-en);
       font-size: clamp(2.5rem, 5vw, 4.5rem);
@@ -236,15 +226,8 @@
     }
 
     @keyframes logofade {
-      from {
-        opacity: 0;
-        transform: translateY(-20px)
-      }
-
-      to {
-        opacity: 1;
-        transform: none
-      }
+      from { opacity: 0; transform: translateY(-20px) }
+      to { opacity: 1; transform: none }
     }
 
     .ve-tagline {
@@ -257,7 +240,6 @@
       opacity: 0;
     }
 
-    /* Question label */
     .ve-question {
       font-size: clamp(1.1rem, 2.2vw, 1.5rem);
       font-weight: 700;
@@ -273,7 +255,6 @@
       font-weight: 900;
     }
 
-    /* Cards row */
     .ve-cards {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -301,7 +282,6 @@
       text-align: left;
     }
 
-    /* Hover glow */
     .ve-card::before {
       content: '';
       position: absolute;
@@ -311,33 +291,14 @@
       transition: opacity .45s;
     }
 
-    .ve-card.recruiter-card::before {
-      background: radial-gradient(ellipse 100% 100% at 50% 0%, rgba(0, 229, 255, .12), transparent 70%);
-    }
+    .ve-card.recruiter-card::before { background: radial-gradient(ellipse 100% 100% at 50% 0%, rgba(0, 229, 255, .12), transparent 70%); }
+    .ve-card.client-card::before { background: radial-gradient(ellipse 100% 100% at 50% 0%, rgba(245, 158, 11, .12), transparent 70%); }
 
-    .ve-card.client-card::before {
-      background: radial-gradient(ellipse 100% 100% at 50% 0%, rgba(245, 158, 11, .12), transparent 70%);
-    }
+    .ve-card:hover { transform: translateY(-10px); }
+    .ve-card:hover::before { opacity: 1; }
+    .ve-card.recruiter-card:hover { border-color: var(--cyan); box-shadow: 0 28px 72px rgba(0, 229, 255, .18); }
+    .ve-card.client-card:hover { border-color: var(--amber); box-shadow: 0 28px 72px rgba(245, 158, 11, .18); }
 
-    .ve-card:hover {
-      transform: translateY(-10px);
-    }
-
-    .ve-card:hover::before {
-      opacity: 1;
-    }
-
-    .ve-card.recruiter-card:hover {
-      border-color: var(--cyan);
-      box-shadow: 0 28px 72px rgba(0, 229, 255, .18);
-    }
-
-    .ve-card.client-card:hover {
-      border-color: var(--amber);
-      box-shadow: 0 28px 72px rgba(245, 158, 11, .18);
-    }
-
-    /* Corner decoration */
     .ve-card::after {
       content: attr(data-num);
       position: absolute;
@@ -351,19 +312,10 @@
       pointer-events: none;
     }
 
-    .ve-card.recruiter-card::after {
-      color: var(--cyan);
-    }
+    .ve-card.recruiter-card::after { color: var(--cyan); }
+    .ve-card.client-card::after { color: var(--amber); }
+    .ve-card:hover::after { opacity: .12; }
 
-    .ve-card.client-card::after {
-      color: var(--amber);
-    }
-
-    .ve-card:hover::after {
-      opacity: .12;
-    }
-
-    /* Icon circle */
     .ve-icon-wrap {
       width: 68px;
       height: 68px;
@@ -377,35 +329,11 @@
       border: 1.5px solid;
     }
 
-    .recruiter-card .ve-icon-wrap {
-      background: rgba(0, 229, 255, .07);
-      border-color: rgba(0, 229, 255, .2);
-      color: var(--cyan);
-    }
-
-    .client-card .ve-icon-wrap {
-      background: rgba(245, 158, 11, .07);
-      border-color: rgba(245, 158, 11, .2);
-      color: var(--amber);
-    }
-
-    .ve-card:hover .ve-icon-wrap {
-      transform: scale(1.08) rotate(-4deg);
-    }
-
-    .recruiter-card:hover .ve-icon-wrap {
-      background: var(--cyan);
-      color: var(--bg);
-      border-color: var(--cyan);
-      box-shadow: 0 8px 28px rgba(0, 229, 255, .35);
-    }
-
-    .client-card:hover .ve-icon-wrap {
-      background: var(--amber);
-      color: var(--bg);
-      border-color: var(--amber);
-      box-shadow: 0 8px 28px rgba(245, 158, 11, .35);
-    }
+    .recruiter-card .ve-icon-wrap { background: rgba(0, 229, 255, .07); border-color: rgba(0, 229, 255, .2); color: var(--cyan); }
+    .client-card .ve-icon-wrap { background: rgba(245, 158, 11, .07); border-color: rgba(245, 158, 11, .2); color: var(--amber); }
+    .ve-card:hover .ve-icon-wrap { transform: scale(1.08) rotate(-4deg); }
+    .recruiter-card:hover .ve-icon-wrap { background: var(--cyan); color: var(--bg); border-color: var(--cyan); box-shadow: 0 8px 28px rgba(0, 229, 255, .35); }
+    .client-card:hover .ve-icon-wrap { background: var(--amber); color: var(--bg); border-color: var(--amber); box-shadow: 0 8px 28px rgba(245, 158, 11, .35); }
 
     .ve-card-title {
       font-size: clamp(1.2rem, 2vw, 1.6rem);
@@ -416,2529 +344,427 @@
       letter-spacing: .03em;
     }
 
-    .ve-card-subtitle {
-      font-size: .82rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      transition: color .3s;
-    }
+    .ve-card-subtitle { font-size: .82rem; font-weight: 700; margin-bottom: 16px; transition: color .3s; }
+    .recruiter-card .ve-card-subtitle { color: var(--cyan); }
+    .client-card .ve-card-subtitle { color: var(--amber); }
 
-    .recruiter-card .ve-card-subtitle {
-      color: var(--cyan);
-    }
+    .ve-card-desc { font-size: .88rem; color: var(--w60); line-height: 1.85; margin-bottom: 24px; }
 
-    .client-card .ve-card-subtitle {
-      color: var(--amber);
-    }
+    .ve-feats { display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+    .ve-feat { display: flex; align-items: center; gap: 10px; font-size: .78rem; color: var(--w60); font-weight: 600; }
+    [dir="rtl"] .ve-feat { flex-direction: row-reverse; }
 
-    .ve-card-desc {
-      font-size: .88rem;
-      color: var(--w60);
-      line-height: 1.85;
-      margin-bottom: 24px;
-    }
+    .ve-feat-dot { width: 6px; height: 6px; border-radius: 50%; flex-shrink: 0; }
+    .recruiter-card .ve-feat-dot { background: var(--cyan); }
+    .client-card .ve-feat-dot { background: var(--amber); }
 
-    /* Features list */
-    .ve-feats {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
-      margin-bottom: 28px;
-    }
-
-    .ve-feat {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-size: .78rem;
-      color: var(--w60);
-      font-weight: 600;
-    }
-
-    [dir="rtl"] .ve-feat {
-      flex-direction: row-reverse;
-    }
-
-    .ve-feat-dot {
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-
-    .recruiter-card .ve-feat-dot {
-      background: var(--cyan);
-    }
-
-    .client-card .ve-feat-dot {
-      background: var(--amber);
-    }
-
-    /* CTA button inside card */
     .ve-cta {
-      width: 100%;
-      padding: 14px 24px;
-      border-radius: 10px;
-      border: none;
-      font-weight: 900;
-      font-size: .88rem;
-      font-family: var(--ff);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      transition: all .3s var(--ease);
+      width: 100%; padding: 14px 24px; border-radius: 10px; border: none; font-weight: 900; font-size: .88rem; font-family: var(--ff); display: flex; align-items: center; justify-content: center; gap: 10px; transition: all .3s var(--ease);
     }
+    .recruiter-card .ve-cta { background: rgba(0, 229, 255, .1); color: var(--cyan); border: 1.5px solid rgba(0, 229, 255, .25); }
+    .client-card .ve-cta { background: rgba(245, 158, 11, .1); color: var(--amber); border: 1.5px solid rgba(245, 158, 11, .25); }
+    .recruiter-card:hover .ve-cta { background: var(--cyan); color: var(--bg); box-shadow: 0 8px 24px rgba(0, 229, 255, .3); }
+    .client-card:hover .ve-cta { background: var(--amber); color: var(--bg); box-shadow: 0 8px 24px rgba(245, 158, 11, .3); }
 
-    .recruiter-card .ve-cta {
-      background: rgba(0, 229, 255, .1);
-      color: var(--cyan);
-      border: 1.5px solid rgba(0, 229, 255, .25);
-    }
+    .ve-cta-arr { transition: transform .3s var(--ease); }
+    .ve-card:hover .ve-cta-arr { transform: translateX(-6px); }
+    [dir="ltr"] .ve-card:hover .ve-cta-arr { transform: translateX(6px); }
 
-    .client-card .ve-cta {
-      background: rgba(245, 158, 11, .1);
-      color: var(--amber);
-      border: 1.5px solid rgba(245, 158, 11, .25);
-    }
+    .ve-hint { margin-top: 32px; font-size: .73rem; color: var(--w35); letter-spacing: .08em; animation: logofade 1s .6s var(--ease) forwards; opacity: 0; }
 
-    .recruiter-card:hover .ve-cta {
-      background: var(--cyan);
-      color: var(--bg);
-      box-shadow: 0 8px 24px rgba(0, 229, 255, .3);
-    }
+    .ve-lang-row { display: flex; gap: 10px; margin-bottom: 28px; animation: logofade 1s .22s var(--ease) forwards; opacity: 0; }
+    .ve-lang-btn { background: var(--surface); border: 1.5px solid var(--border2); color: var(--w60); padding: 7px 20px; border-radius: 8px; font-size: .8rem; font-weight: 700; font-family: var(--ff); cursor: pointer; transition: all .22s; }
+    .ve-lang-btn:hover { border-color: var(--acc); color: var(--acc); }
+    .ve-lang-btn.on { background: var(--acc); border-color: var(--acc); color: var(--bg); }
 
-    .client-card:hover .ve-cta {
-      background: var(--amber);
-      color: var(--bg);
-      box-shadow: 0 8px 24px rgba(245, 158, 11, .3);
-    }
-
-    .ve-cta-arr {
-      transition: transform .3s var(--ease);
-    }
-
-    .ve-card:hover .ve-cta-arr {
-      transform: translateX(-6px);
-    }
-
-    [dir="ltr"] .ve-card:hover .ve-cta-arr {
-      transform: translateX(6px);
-    }
-
-    /* Bottom hint */
-    .ve-hint {
-      margin-top: 32px;
-      font-size: .73rem;
-      color: var(--w35);
-      letter-spacing: .08em;
-      animation: logofade 1s .6s var(--ease) forwards;
-      opacity: 0;
-    }
-
-    /* Language switcher on visitor entry */
-    .ve-lang-row {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 28px;
-      animation: logofade 1s .22s var(--ease) forwards;
-      opacity: 0;
-    }
-
-    .ve-lang-btn {
-      background: var(--surface);
-      border: 1.5px solid var(--border2);
-      color: var(--w60);
-      padding: 7px 20px;
-      border-radius: 8px;
-      font-size: .8rem;
-      font-weight: 700;
-      font-family: var(--ff);
-      cursor: pointer;
-      transition: all .22s;
-    }
-
-    .ve-lang-btn:hover {
-      border-color: var(--acc);
-      color: var(--acc);
-    }
-
-    .ve-lang-btn.on {
-      background: var(--acc);
-      border-color: var(--acc);
-      color: var(--bg);
-    }
-
-    /* Pulse ring on selected card */
     @keyframes ringpulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(0, 229, 255, .35), 0 28px 72px rgba(0, 229, 255, .18);
-      }
-
-      70% {
-        box-shadow: 0 0 0 18px rgba(0, 229, 255, 0), 0 28px 72px rgba(0, 229, 255, .18);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(0, 229, 255, 0), 0 28px 72px rgba(0, 229, 255, .18);
-      }
+      0% { box-shadow: 0 0 0 0 rgba(0, 229, 255, .35), 0 28px 72px rgba(0, 229, 255, .18); }
+      70% { box-shadow: 0 0 0 18px rgba(0, 229, 255, 0), 0 28px 72px rgba(0, 229, 255, .18); }
+      100% { box-shadow: 0 0 0 0 rgba(0, 229, 255, 0), 0 28px 72px rgba(0, 229, 255, .18); }
     }
-
     @keyframes ringpulse-amber {
-      0% {
-        box-shadow: 0 0 0 0 rgba(245, 158, 11, .35), 0 28px 72px rgba(245, 158, 11, .18);
-      }
-
-      70% {
-        box-shadow: 0 0 0 18px rgba(245, 158, 11, 0), 0 28px 72px rgba(245, 158, 11, .18);
-      }
-
-      100% {
-        box-shadow: 0 0 0 0 rgba(245, 158, 11, 0), 0 28px 72px rgba(245, 158, 11, .18);
-      }
+      0% { box-shadow: 0 0 0 0 rgba(245, 158, 11, .35), 0 28px 72px rgba(245, 158, 11, .18); }
+      70% { box-shadow: 0 0 0 18px rgba(245, 158, 11, 0), 0 28px 72px rgba(245, 158, 11, .18); }
+      100% { box-shadow: 0 0 0 0 rgba(245, 158, 11, 0), 0 28px 72px rgba(245, 158, 11, .18); }
     }
-
-    .ve-card.selected.recruiter-card {
-      animation: ringpulse .6s var(--ease);
-      border-color: var(--cyan);
-    }
-
-    .ve-card.selected.client-card {
-      animation: ringpulse-amber .6s var(--ease);
-      border-color: var(--amber);
-    }
+    .ve-card.selected.recruiter-card { animation: ringpulse .6s var(--ease); border-color: var(--cyan); }
+    .ve-card.selected.client-card { animation: ringpulse-amber .6s var(--ease); border-color: var(--amber); }
 
     @media(max-width:600px) {
-      .ve-cards {
-        grid-template-columns: 1fr;
-        max-width: 380px;
-      }
-
-      .ve-card {
-        padding: 32px 24px 28px;
-        text-align: center;
-      }
-
-      .ve-icon-wrap {
-        margin: 0 auto 18px;
-      }
-
-      .ve-feats {
-        align-items: center;
-      }
-
-      [dir="rtl"] .ve-feat {
-        flex-direction: row;
-      }
-    }
-
-    /* ════════════════════════════════════════════════════
-   5. LANGUAGE ENTRY (STEP 2)
-════════════════════════════════════════════════════ */
-    #lang-entry {
-      position: fixed;
-      inset: 0;
-      background: var(--bg);
-      z-index: 8500;
-      display: none;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 0;
-      transition: opacity .5s var(--ease), transform .5s var(--ease);
-    }
-
-    #lang-entry.visible {
-      display: flex
-    }
-
-    #lang-entry.gone {
-      opacity: 0;
-      transform: scale(1.05);
-      pointer-events: none
-    }
-
-    #lang-entry::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(rgba(0, 229, 255, .05) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 229, 255, .05) 1px, transparent 1px);
-      background-size: 60px 60px;
-      opacity: .5;
-    }
-
-    .le-title {
-      font-size: clamp(1.6rem, 3.5vw, 3rem);
-      font-weight: 900;
-      color: var(--white);
-      text-align: center;
-      margin-bottom: 10px;
-      font-family: 'Tajawal', sans-serif;
-      position: relative;
-      z-index: 1;
-    }
-
-    .le-sub {
-      font-size: .9rem;
-      color: var(--w60);
-      margin-bottom: 52px;
-      text-align: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .le-cards {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: center;
-      position: relative;
-      z-index: 1;
-    }
-
-    .le-card {
-      background: var(--surface);
-      border: 2px solid var(--border2);
-      border-radius: 18px;
-      padding: 40px 44px;
-      min-width: 220px;
-      text-align: center;
-      cursor: pointer;
-      transition: all .35s var(--ease);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .le-card::before {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: radial-gradient(circle at 50% 0%, var(--glow), transparent 70%);
-      opacity: 0;
-      transition: opacity .35s;
-    }
-
-    .le-card:hover {
-      transform: translateY(-8px);
-      border-color: var(--acc);
-      box-shadow: 0 20px 48px var(--glow)
-    }
-
-    .le-card:hover::before {
-      opacity: 1
-    }
-
-    .le-flag {
-      font-size: 3rem;
-      margin-bottom: 14px
-    }
-
-    .le-lang {
-      font-size: 1.4rem;
-      font-weight: 800;
-      margin-bottom: 6px;
-      color: var(--white)
-    }
-
-    .le-name {
-      font-size: .85rem;
-      color: var(--w60)
-    }
-
-    /* Back button in lang step */
-    .le-back {
-      position: absolute;
-      top: 28px;
-      inset-inline-start: 32px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      background: none;
-      border: 1px solid var(--border2);
-      color: var(--w60);
-      font-size: .78rem;
-      font-weight: 700;
-      padding: 8px 16px;
-      border-radius: 8px;
-      transition: all .2s;
-      z-index: 2;
-    }
-
-    .le-back:hover {
-      color: var(--acc);
-      border-color: var(--acc);
-      background: var(--glow)
+      .ve-cards { grid-template-columns: 1fr; max-width: 380px; }
+      .ve-card { padding: 32px 24px 28px; text-align: center; }
+      .ve-icon-wrap { margin: 0 auto 18px; }
+      .ve-feats { align-items: center; }
+      [dir="rtl"] .ve-feat { flex-direction: row; }
     }
 
     /* ════════════════════════════════════════════════════
    6. NAVBAR
 ════════════════════════════════════════════════════ */
-    nav {
-      position: fixed;
-      top: 0;
-      inset-inline: 0;
-      height: 66px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 56px;
-      z-index: 1000;
-      gap: 16px;
-      background: rgba(5, 7, 15, .92);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border);
-      transition: border-color .3s, background .3s;
-    }
-
-    nav.scrolled {
-      border-bottom-color: var(--border2)
-    }
-
-    .nav-logo {
-      font-family: var(--ff-en);
-      font-size: 1.6rem;
-      letter-spacing: .12em;
-      color: var(--acc);
-      flex-shrink: 0;
-      transition: color .3s;
-    }
-
-    .nav-links {
-      display: flex;
-      gap: 4px;
-      align-items: center
-    }
-
-    .nav-a {
-      font-size: .8rem;
-      padding: 7px 14px;
-      border-radius: 8px;
-      color: var(--w60);
-      font-weight: 700;
-      transition: all .2s;
-      white-space: nowrap;
-    }
-
-    .nav-a:hover,
-    .nav-a.active {
-      color: var(--acc);
-      background: var(--glow)
-    }
-
-    .nav-right {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      flex-shrink: 0
-    }
-
-    .lang-btn {
-      padding: 6px 13px;
-      border-radius: 6px;
-      border: 1px solid var(--border2);
-      background: transparent;
-      color: var(--w60);
-      font-size: .72rem;
-      font-weight: 800;
-      transition: all .2s;
-      letter-spacing: .06em;
-    }
-
-    .lang-btn:hover,
-    .lang-btn.on {
-      background: var(--acc);
-      color: var(--bg);
-      border-color: var(--acc)
-    }
-
-    .mode-pill {
-      display: flex;
-      background: var(--surface2);
-      border-radius: 50px;
-      border: 1px solid var(--border2);
-      overflow: hidden;
-    }
-
-    .mpb {
-      padding: 7px 16px;
-      font-size: .72rem;
-      font-weight: 800;
-      border: none;
-      background: transparent;
-      color: var(--w60);
-      transition: all .2s;
-      white-space: nowrap;
-    }
-
-    .mpb.on {
-      background: var(--acc);
-      color: var(--bg)
-    }
-
-    .cv-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 8px 18px;
-      border-radius: 8px;
-      border: 1.5px solid var(--gold);
-      background: rgba(212, 160, 23, .07);
-      color: var(--gold);
-      font-size: .75rem;
-      font-weight: 800;
-      transition: all .25s;
-      white-space: nowrap;
-    }
-
-    .cv-btn:hover {
-      background: rgba(212, 160, 23, .18);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 20px rgba(212, 160, 23, .2)
-    }
-
-    .hbg {
-      display: none;
-      flex-direction: column;
-      gap: 5px;
-      padding: 8px;
-      background: none;
-      border: none
-    }
-
-    .hbg span {
-      width: 22px;
-      height: 2px;
-      background: var(--white);
-      border-radius: 2px;
-      transition: all .3s;
-      display: block
-    }
-
-    .hbg.open span:nth-child(1) {
-      transform: translateY(7px) rotate(45deg)
-    }
-
-    .hbg.open span:nth-child(2) {
-      opacity: 0
-    }
-
-    .hbg.open span:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg)
-    }
-
-    .mob-nav {
-      position: fixed;
-      inset: 0;
-      background: var(--bg2);
-      z-index: 999;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      transform: translateX(100%);
-      transition: transform .4s var(--ease);
-    }
-
-    [dir="rtl"] .mob-nav {
-      transform: translateX(-100%)
-    }
-
-    .mob-nav.open {
-      transform: none
-    }
-
-    .mob-nav .nav-a {
-      font-size: 1.4rem;
-      padding: 14px 40px
-    }
+    nav { position: fixed; top: 0; inset-inline: 0; height: 66px; display: flex; align-items: center; justify-content: space-between; padding: 0 56px; z-index: 1000; gap: 16px; background: rgba(5, 7, 15, .92); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border-bottom: 1px solid var(--border); transition: border-color .3s, background .3s; }
+    nav.scrolled { border-bottom-color: var(--border2) }
+    .nav-logo { font-family: var(--ff-en); font-size: 1.6rem; letter-spacing: .12em; color: var(--acc); flex-shrink: 0; transition: color .3s; }
+    .nav-links { display: flex; gap: 4px; align-items: center }
+    .nav-a { font-size: .8rem; padding: 7px 14px; border-radius: 8px; color: var(--w60); font-weight: 700; transition: all .2s; white-space: nowrap; }
+    .nav-a:hover, .nav-a.active { color: var(--acc); background: var(--glow) }
+    .nav-right { display: flex; align-items: center; gap: 8px; flex-shrink: 0 }
+    .lang-btn { padding: 6px 13px; border-radius: 6px; border: 1px solid var(--border2); background: transparent; color: var(--w60); font-size: .72rem; font-weight: 800; transition: all .2s; letter-spacing: .06em; }
+    .lang-btn:hover, .lang-btn.on { background: var(--acc); color: var(--bg); border-color: var(--acc) }
+    .mode-pill { display: flex; background: var(--surface2); border-radius: 50px; border: 1px solid var(--border2); overflow: hidden; }
+    .mpb { padding: 7px 16px; font-size: .72rem; font-weight: 800; border: none; background: transparent; color: var(--w60); transition: all .2s; white-space: nowrap; }
+    .mpb.on { background: var(--acc); color: var(--bg) }
+    .cv-btn { display: inline-flex; align-items: center; gap: 8px; padding: 8px 18px; border-radius: 8px; border: 1.5px solid var(--gold); background: rgba(212, 160, 23, .07); color: var(--gold); font-size: .75rem; font-weight: 800; transition: all .25s; white-space: nowrap; }
+    .cv-btn:hover { background: rgba(212, 160, 23, .18); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(212, 160, 23, .2) }
+    .hbg { display: none; flex-direction: column; gap: 5px; padding: 8px; background: none; border: none }
+    .hbg span { width: 22px; height: 2px; background: var(--white); border-radius: 2px; transition: all .3s; display: block }
+    .hbg.open span:nth-child(1) { transform: translateY(7px) rotate(45deg) }
+    .hbg.open span:nth-child(2) { opacity: 0 }
+    .hbg.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg) }
+    .mob-nav { position: fixed; inset: 0; background: var(--bg2); z-index: 999; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 12px; transform: translateX(100%); transition: transform .4s var(--ease); }
+    [dir="rtl"] .mob-nav { transform: translateX(-100%) }
+    .mob-nav.open { transform: none }
+    .mob-nav .nav-a { font-size: 1.4rem; padding: 14px 40px }
 
     /* ════════════════════════════════════════════════════
    7. HERO
 ════════════════════════════════════════════════════ */
-    #hero {
-      min-height: 100svh;
-      display: grid;
-      grid-template-rows: 1fr auto;
-      padding-top: 66px;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .hero-ambient {
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background:
-        radial-gradient(ellipse 70% 60% at 15% 50%, rgba(0, 229, 255, .055), transparent 65%),
-        radial-gradient(ellipse 55% 45% at 85% 35%, rgba(139, 92, 246, .045), transparent 65%);
-    }
-
-    .hero-grid {
-      position: absolute;
-      inset: 0;
-      background-image:
-        linear-gradient(var(--border) 1px, transparent 1px),
-        linear-gradient(90deg, var(--border) 1px, transparent 1px);
-      background-size: 64px 64px;
-      mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black, transparent);
-    }
-
-    .hero-body {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: center;
-      padding: 80px 80px 40px;
-      position: relative;
-      z-index: 2;
-      max-width: 1440px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    .eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: .78rem;
-      font-weight: 800;
-      color: var(--acc);
-      letter-spacing: .1em;
-      text-transform: uppercase;
-      margin-bottom: 24px;
-    }
-
-    .eyebrow::before {
-      content: '';
-      width: 28px;
-      height: 2px;
-      background: var(--acc);
-      flex-shrink: 0
-    }
-
-    [dir="rtl"] .eyebrow {
-      flex-direction: row-reverse
-    }
-
-    [dir="rtl"] .eyebrow::before {
-      display: none
-    }
-
-    [dir="rtl"] .eyebrow::after {
-      content: '';
-      width: 28px;
-      height: 2px;
-      background: var(--acc);
-      flex-shrink: 0
-    }
-
-    .hero-name {
-      font-family: var(--ff-en);
-      font-size: clamp(4.5rem, 10vw, 13rem);
-      line-height: .85;
-      letter-spacing: -.01em;
-      margin-bottom: 16px;
-      color: var(--white);
-    }
-
-    .hero-name .sk {
-      color: transparent;
-      -webkit-text-stroke: 2px rgba(238, 242, 247, .3);
-    }
-
-    .hero-name .ac {
-      color: var(--acc)
-    }
-
-    .hero-tagline {
-      font-size: clamp(1rem, 1.8vw, 1.4rem);
-      color: var(--w60);
-      margin-bottom: 28px;
-      font-weight: 500;
-      line-height: 1.6;
-    }
-
-    .hero-tagline strong {
-      color: var(--white);
-      font-weight: 800
-    }
-
-    .hero-bio {
-      font-size: 1rem;
-      color: var(--w60);
-      line-height: 1.9;
-      max-width: 500px;
-      margin-bottom: 44px;
-      border-inline-end: 3px solid var(--acc);
-      padding-inline-end: 22px;
-    }
-
-    .cta-row {
-      display: flex;
-      gap: 14px;
-      flex-wrap: wrap;
-      align-items: center
-    }
-
-    .btn-hire {
-      display: inline-flex;
-      align-items: center;
-      gap: 11px;
-      padding: 17px 38px;
-      background: var(--acc);
-      color: var(--bg);
-      border: none;
-      border-radius: 10px;
-      font-weight: 900;
-      font-size: .92rem;
-      transition: all .3s var(--ease);
-      clip-path: polygon(0 0, calc(100%-14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100%-14px));
-    }
-
-    .btn-hire:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 18px 44px var(--glow);
-      filter: brightness(1.08)
-    }
-
-    .btn-project {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      padding: 16px 32px;
-      border: 2px solid var(--border2);
-      border-radius: 10px;
-      color: var(--white);
-      font-weight: 700;
-      font-size: .9rem;
-      background: transparent;
-      transition: all .3s var(--ease);
-    }
-
-    .btn-project:hover {
-      border-color: var(--acc);
-      color: var(--acc);
-      background: var(--glow)
-    }
-
-    .btn-scroll {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 0;
-      border: none;
-      background: transparent;
-      color: var(--w60);
-      font-size: .8rem;
-      font-weight: 700;
-      transition: color .2s;
-    }
-
-    .btn-scroll:hover {
-      color: var(--acc)
-    }
-
-    .hero-visual {
-      position: relative;
-      display: flex;
-      justify-content: center
-    }
-
-    .photo-ring {
-      width: 360px;
-      height: 420px;
-      border-radius: 24px;
-      background: var(--surface);
-      border: 1px solid var(--border2);
-      overflow: hidden;
-      position: relative;
-    }
-
-    .photo-ring img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover
-    }
-
-    .photo-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 14px;
-      background: linear-gradient(135deg, var(--surface), var(--surface2));
-    }
-
-    .photo-placeholder i {
-      font-size: 5rem;
-      color: var(--acc);
-      opacity: .25
-    }
-
-    .photo-placeholder span {
-      font-size: .8rem;
-      color: var(--w35)
-    }
-
-    .photo-badge {
-      position: absolute;
-      bottom: -18px;
-      inset-inline-end: -18px;
-      background: var(--acc);
-      color: var(--bg);
-      padding: 14px 22px;
-      border-radius: 14px;
-      font-weight: 900;
-      font-size: .85rem;
-      box-shadow: 0 10px 28px var(--glow);
-      line-height: 1.3;
-    }
-
-    .photo-badge b {
-      font-size: 1.6rem;
-      display: block
-    }
-
-    .ftag {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      gap: 7px;
-      background: var(--surface2);
-      border: 1px solid var(--border2);
-      border-radius: 10px;
-      padding: 9px 15px;
-      font-size: .74rem;
-      font-weight: 700;
-      color: var(--w60);
-      white-space: nowrap;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, .4);
-      animation: flt 4s ease-in-out infinite;
-    }
-
-    .ftag-dot {
-      width: 7px;
-      height: 7px;
-      border-radius: 50%;
-      background: var(--acc)
-    }
-
-    .ft1 {
-      top: -18px;
-      inset-inline-start: -44px;
-      animation-delay: 0s
-    }
-
-    .ft2 {
-      bottom: 80px;
-      inset-inline-start: -55px;
-      animation-delay: 1.4s
-    }
-
-    .ft3 {
-      top: 60px;
-      inset-inline-end: -50px;
-      animation-delay: .8s
-    }
-
-    @keyframes flt {
-
-      0%,
-      100% {
-        transform: translateY(0)
-      }
-
-      50% {
-        transform: translateY(-9px)
-      }
-    }
-
-    .hero-strip {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      border-top: 1px solid var(--border);
-      background: var(--bg2);
-      position: relative;
-      z-index: 2;
-    }
-
-    .strip-cell {
-      padding: 34px 48px;
-      border-inline-end: 1px solid var(--border);
-      position: relative;
-      overflow: hidden;
-      transition: background .3s;
-      cursor: default;
-    }
-
-    .strip-cell:last-child {
-      border-inline-end: none
-    }
-
-    .strip-cell::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      inset-inline-start: 0;
-      inset-inline-end: 0;
-      height: 3px;
-      background: linear-gradient(90deg, var(--acc), var(--acc2));
-      transform: scaleX(0);
-      transform-origin: inline-end;
-      transition: transform .4s var(--ease);
-    }
-
-    .strip-cell:hover {
-      background: var(--glow)
-    }
-
-    .strip-cell:hover::after {
-      transform: scaleX(1)
-    }
-
-    .strip-n {
-      font-family: var(--ff-en);
-      font-size: 3.2rem;
-      color: var(--white);
-      line-height: 1;
-    }
-
-    .strip-n sup {
-      font-size: 1.1rem;
-      color: var(--acc);
-      font-weight: 900;
-      font-family: var(--ff)
-    }
-
-    .strip-l {
-      font-size: .7rem;
-      color: var(--w35);
-      text-transform: uppercase;
-      letter-spacing: .15em;
-      margin-top: 8px;
-      font-weight: 700
-    }
+    #hero { min-height: 100svh; display: grid; grid-template-rows: 1fr auto; padding-top: 66px; position: relative; overflow: hidden; }
+    .hero-ambient { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(ellipse 70% 60% at 15% 50%, rgba(0, 229, 255, .055), transparent 65%), radial-gradient(ellipse 55% 45% at 85% 35%, rgba(139, 92, 246, .045), transparent 65%); }
+    .hero-grid { position: absolute; inset: 0; background-image: linear-gradient(var(--border) 1px, transparent 1px), linear-gradient(90deg, var(--border) 1px, transparent 1px); background-size: 64px 64px; mask-image: radial-gradient(ellipse 90% 80% at 50% 50%, black, transparent); }
+    .hero-body { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; padding: 80px 80px 40px; position: relative; z-index: 2; max-width: 1440px; margin: 0 auto; width: 100%; }
+    .eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: .78rem; font-weight: 800; color: var(--acc); letter-spacing: .1em; text-transform: uppercase; margin-bottom: 24px; }
+    .eyebrow::before { content: ''; width: 28px; height: 2px; background: var(--acc); flex-shrink: 0 }
+    [dir="rtl"] .eyebrow { flex-direction: row-reverse }
+    [dir="rtl"] .eyebrow::before { display: none }
+    [dir="rtl"] .eyebrow::after { content: ''; width: 28px; height: 2px; background: var(--acc); flex-shrink: 0 }
+    .hero-name { font-family: var(--ff-en); font-size: clamp(4.5rem, 10vw, 13rem); line-height: .85; letter-spacing: -.01em; margin-bottom: 16px; color: var(--white); }
+    .hero-name .sk { color: transparent; -webkit-text-stroke: 2px rgba(238, 242, 247, .3); }
+    .hero-name .ac { color: var(--acc) }
+    .hero-tagline { font-size: clamp(1rem, 1.8vw, 1.4rem); color: var(--w60); margin-bottom: 28px; font-weight: 500; line-height: 1.6; }
+    .hero-tagline strong { color: var(--white); font-weight: 800 }
+    .hero-bio { font-size: 1rem; color: var(--w60); line-height: 1.9; max-width: 500px; margin-bottom: 44px; border-inline-end: 3px solid var(--acc); padding-inline-end: 22px; }
+    .cta-row { display: flex; gap: 14px; flex-wrap: wrap; align-items: center }
+    .btn-hire { display: inline-flex; align-items: center; gap: 11px; padding: 17px 38px; background: var(--acc); color: var(--bg); border: none; border-radius: 10px; font-weight: 900; font-size: .92rem; transition: all .3s var(--ease); clip-path: polygon(0 0, calc(100%-14px) 0, 100% 14px, 100% 100%, 14px 100%, 0 calc(100%-14px)); }
+    .btn-hire:hover { transform: translateY(-5px); box-shadow: 0 18px 44px var(--glow); filter: brightness(1.08) }
+    .btn-project { display: inline-flex; align-items: center; gap: 10px; padding: 16px 32px; border: 2px solid var(--border2); border-radius: 10px; color: var(--white); font-weight: 700; font-size: .9rem; background: transparent; transition: all .3s var(--ease); }
+    .btn-project:hover { border-color: var(--acc); color: var(--acc); background: var(--glow) }
+    .btn-scroll { display: inline-flex; align-items: center; gap: 8px; padding: 0; border: none; background: transparent; color: var(--w60); font-size: .8rem; font-weight: 700; transition: color .2s; }
+    .btn-scroll:hover { color: var(--acc) }
+    .hero-visual { position: relative; display: flex; justify-content: center }
+    .photo-ring { width: 360px; height: 420px; border-radius: 24px; background: var(--surface); border: 1px solid var(--border2); overflow: hidden; position: relative; }
+    .photo-ring img { width: 100%; height: 100%; object-fit: cover }
+    .photo-placeholder { width: 100%; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 14px; background: linear-gradient(135deg, var(--surface), var(--surface2)); }
+    .photo-placeholder i { font-size: 5rem; color: var(--acc); opacity: .25 }
+    .photo-placeholder span { font-size: .8rem; color: var(--w35) }
+    .photo-badge { position: absolute; bottom: -18px; inset-inline-end: -18px; background: var(--acc); color: var(--bg); padding: 14px 22px; border-radius: 14px; font-weight: 900; font-size: .85rem; box-shadow: 0 10px 28px var(--glow); line-height: 1.3; }
+    .photo-badge b { font-size: 1.6rem; display: block }
+    .ftag { position: absolute; display: flex; align-items: center; gap: 7px; background: var(--surface2); border: 1px solid var(--border2); border-radius: 10px; padding: 9px 15px; font-size: .74rem; font-weight: 700; color: var(--w60); white-space: nowrap; box-shadow: 0 4px 20px rgba(0, 0, 0, .4); animation: flt 4s ease-in-out infinite; }
+    .ftag-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--acc) }
+    .ft1 { top: -18px; inset-inline-start: -44px; animation-delay: 0s }
+    .ft2 { bottom: 80px; inset-inline-start: -55px; animation-delay: 1.4s }
+    .ft3 { top: 60px; inset-inline-end: -50px; animation-delay: .8s }
+    @keyframes flt { 0%, 100% { transform: translateY(0) } 50% { transform: translateY(-9px) } }
+    .hero-strip { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--border); background: var(--bg2); position: relative; z-index: 2; }
+    .strip-cell { padding: 34px 48px; border-inline-end: 1px solid var(--border); position: relative; overflow: hidden; transition: background .3s; cursor: default; }
+    .strip-cell:last-child { border-inline-end: none }
+    .strip-cell::after { content: ''; position: absolute; bottom: 0; inset-inline-start: 0; inset-inline-end: 0; height: 3px; background: linear-gradient(90deg, var(--acc), var(--acc2)); transform: scaleX(0); transform-origin: inline-end; transition: transform .4s var(--ease); }
+    .strip-cell:hover { background: var(--glow) }
+    .strip-cell:hover::after { transform: scaleX(1) }
+    .strip-n { font-family: var(--ff-en); font-size: 3.2rem; color: var(--white); line-height: 1; }
+    .strip-n sup { font-size: 1.1rem; color: var(--acc); font-weight: 900; font-family: var(--ff) }
+    .strip-l { font-size: .7rem; color: var(--w35); text-transform: uppercase; letter-spacing: .15em; margin-top: 8px; font-weight: 700 }
 
     /* ════════════════════════════════════════════════════
    8. SHARED SECTION STYLES
 ════════════════════════════════════════════════════ */
-    section {
-      position: relative
-    }
-
-    .inn {
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 140px 80px
-    }
-
-    .sec-tag {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      font-size: .72rem;
-      font-weight: 800;
-      color: var(--acc);
-      text-transform: uppercase;
-      letter-spacing: .18em;
-      margin-bottom: 18px;
-    }
-
-    .sec-tag::before {
-      content: '//';
-      opacity: .5
-    }
-
-    .sec-h {
-      font-family: var(--ff-en);
-      font-size: clamp(3rem, 6.5vw, 9rem);
-      line-height: .88;
-      letter-spacing: -.02em;
-      margin-bottom: 80px;
-      color: var(--white);
-    }
-
-    .sec-h .out {
-      color: transparent;
-      -webkit-text-stroke: 1.5px var(--w35);
-      opacity: .6
-    }
-
-    .sec-h .ac {
-      color: var(--acc)
-    }
-
-    .rv {
-      opacity: 0;
-      transform: translateY(44px);
-      transition: opacity .85s var(--ease), transform .85s var(--ease)
-    }
-
-    .rv.in {
-      opacity: 1;
-      transform: none
-    }
-
-    .rv[data-d="1"] {
-      transition-delay: .1s
-    }
-
-    .rv[data-d="2"] {
-      transition-delay: .2s
-    }
-
-    .rv[data-d="3"] {
-      transition-delay: .3s
-    }
-
-    .rv[data-d="4"] {
-      transition-delay: .4s
-    }
+    section { position: relative }
+    .inn { max-width: 1440px; margin: 0 auto; padding: 140px 80px }
+    .sec-tag { display: inline-flex; align-items: center; gap: 8px; font-size: .72rem; font-weight: 800; color: var(--acc); text-transform: uppercase; letter-spacing: .18em; margin-bottom: 18px; }
+    .sec-tag::before { content: '//'; opacity: .5 }
+    .sec-h { font-family: var(--ff-en); font-size: clamp(3rem, 6.5vw, 9rem); line-height: .88; letter-spacing: -.02em; margin-bottom: 80px; color: var(--white); }
+    .sec-h .out { color: transparent; -webkit-text-stroke: 1.5px var(--w35); opacity: .6 }
+    .sec-h .ac { color: var(--acc) }
+    .rv { opacity: 0; transform: translateY(44px); transition: opacity .85s var(--ease), transform .85s var(--ease) }
+    .rv.in { opacity: 1; transform: none }
+    .rv[data-d="1"] { transition-delay: .1s }
+    .rv[data-d="2"] { transition-delay: .2s }
+    .rv[data-d="3"] { transition-delay: .3s }
+    .rv[data-d="4"] { transition-delay: .4s }
 
     /* ════════════════════════════════════════════════════
    9. SERVICES
 ════════════════════════════════════════════════════ */
-    #services {
-      background: var(--bg2);
-      overflow: hidden
-    }
-
-    .svc-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 3px;
-    }
-
-    .svc-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 52px 40px;
-      position: relative;
-      overflow: hidden;
-      transition: all .4s var(--ease);
-      cursor: default;
-    }
-
-    .svc-card:hover {
-      border-color: var(--acc);
-      background: var(--glow);
-      transform: translateY(-6px)
-    }
-
-    .svc-card::before {
-      content: attr(data-num);
-      position: absolute;
-      top: 16px;
-      inset-inline-end: 24px;
-      font-family: var(--ff-en);
-      font-size: 5rem;
-      color: var(--acc);
-      opacity: .05;
-      line-height: 1;
-      transition: opacity .3s;
-      pointer-events: none;
-    }
-
-    .svc-card:hover::before {
-      opacity: .12
-    }
-
-    .svc-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 14px;
-      background: var(--glow);
-      border: 1px solid var(--border2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 24px;
-      transition: all .3s;
-    }
-
-    .svc-card:hover .svc-icon {
-      background: var(--acc);
-      color: var(--bg);
-      border-color: var(--acc)
-    }
-
-    .svc-title {
-      font-size: 1.2rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 14px;
-      line-height: 1.3;
-    }
-
-    .svc-desc {
-      font-size: .9rem;
-      color: var(--w60);
-      line-height: 1.85;
-      margin-bottom: 24px
-    }
-
-    .svc-tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 7px
-    }
-
-    .svc-tag {
-      padding: 4px 12px;
-      border-radius: 50px;
-      background: rgba(0, 229, 255, .06);
-      color: var(--acc);
-      font-size: .68rem;
-      font-weight: 700;
-      border: 1px solid var(--border);
-    }
+    #services { background: var(--bg2); overflow: hidden }
+    .svc-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 3px; }
+    .svc-card { background: var(--surface); border: 1px solid var(--border); padding: 52px 40px; position: relative; overflow: hidden; transition: all .4s var(--ease); cursor: default; }
+    .svc-card:hover { border-color: var(--acc); background: var(--glow); transform: translateY(-6px) }
+    .svc-card::before { content: attr(data-num); position: absolute; top: 16px; inset-inline-end: 24px; font-family: var(--ff-en); font-size: 5rem; color: var(--acc); opacity: .05; line-height: 1; transition: opacity .3s; pointer-events: none; }
+    .svc-card:hover::before { opacity: .12 }
+    .svc-icon { width: 56px; height: 56px; border-radius: 14px; background: var(--glow); border: 1px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 1.5rem; margin-bottom: 24px; transition: all .3s; }
+    .svc-card:hover .svc-icon { background: var(--acc); color: var(--bg); border-color: var(--acc) }
+    .svc-title { font-size: 1.2rem; font-weight: 800; color: var(--white); margin-bottom: 14px; line-height: 1.3; }
+    .svc-desc { font-size: .9rem; color: var(--w60); line-height: 1.85; margin-bottom: 24px }
+    .svc-tags { display: flex; flex-wrap: wrap; gap: 7px }
+    .svc-tag { padding: 4px 12px; border-radius: 50px; background: rgba(0, 229, 255, .06); color: var(--acc); font-size: .68rem; font-weight: 700; border: 1px solid var(--border); }
 
     /* ════════════════════════════════════════════════════
    10. HOW I WORK
 ════════════════════════════════════════════════════ */
-    #how {
-      background: var(--bg);
-      overflow: hidden
-    }
-
-    .how-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      position: relative;
-      gap: 0;
-    }
-
-    .how-grid::before {
-      content: '';
-      position: absolute;
-      top: 56px;
-      inset-inline-start: 12%;
-      inset-inline-end: 12%;
-      height: 2px;
-      background: linear-gradient(to inline-end, var(--acc), var(--acc2) 50%, transparent);
-      opacity: .25;
-    }
-
-    .how-step {
-      padding: 0 32px 0;
-      text-align: center;
-      position: relative;
-    }
-
-    .step-num {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      border: 2px solid var(--acc);
-      background: var(--bg);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 28px;
-      font-family: var(--ff-en);
-      font-size: 1.6rem;
-      color: var(--acc);
-      position: relative;
-      z-index: 1;
-      box-shadow: 0 0 0 8px rgba(0, 229, 255, .06);
-      transition: all .4s var(--ease);
-    }
-
-    .how-step:hover .step-num {
-      background: var(--acc);
-      color: var(--bg);
-      box-shadow: 0 0 0 12px var(--glow)
-    }
-
-    .step-icon {
-      font-size: 1.5rem;
-      margin-bottom: 14px
-    }
-
-    .step-title {
-      font-weight: 800;
-      font-size: 1.05rem;
-      color: var(--white);
-      margin-bottom: 12px
-    }
-
-    .step-desc {
-      font-size: .88rem;
-      color: var(--w60);
-      line-height: 1.8
-    }
+    #how { background: var(--bg); overflow: hidden }
+    .how-grid { display: grid; grid-template-columns: repeat(4, 1fr); position: relative; gap: 0; }
+    .how-grid::before { content: ''; position: absolute; top: 56px; inset-inline-start: 12%; inset-inline-end: 12%; height: 2px; background: linear-gradient(to inline-end, var(--acc), var(--acc2) 50%, transparent); opacity: .25; }
+    .how-step { padding: 0 32px 0; text-align: center; position: relative; }
+    .step-num { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--acc); background: var(--bg); display: flex; align-items: center; justify-content: center; margin: 0 auto 28px; font-family: var(--ff-en); font-size: 1.6rem; color: var(--acc); position: relative; z-index: 1; box-shadow: 0 0 0 8px rgba(0, 229, 255, .06); transition: all .4s var(--ease); }
+    .how-step:hover .step-num { background: var(--acc); color: var(--bg); box-shadow: 0 0 0 12px var(--glow) }
+    .step-icon { font-size: 1.5rem; margin-bottom: 14px }
+    .step-title { font-weight: 800; font-size: 1.05rem; color: var(--white); margin-bottom: 12px }
+    .step-desc { font-size: .88rem; color: var(--w60); line-height: 1.8 }
 
     /* ════════════════════════════════════════════════════
    11. CASE STUDIES
 ════════════════════════════════════════════════════ */
-    #projects {
-      background: var(--bg2)
-    }
-
-    .filter-bar {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 56px;
-      flex-wrap: wrap
-    }
-
-    .fb {
-      padding: 8px 20px;
-      border-radius: 50px;
-      border: 1px solid var(--border);
-      background: transparent;
-      color: var(--w60);
-      font-size: .78rem;
-      font-weight: 700;
-      transition: all .22s;
-    }
-
-    .fb:hover,
-    .fb.on {
-      border-color: var(--acc);
-      color: var(--acc);
-      background: var(--glow)
-    }
-
-    .cs-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px
-    }
-
-    .cs-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      overflow: hidden;
-      display: flex;
-      flex-direction: column;
-      transition: all .4s var(--ease);
-    }
-
-    .cs-card:hover {
-      border-color: var(--acc);
-      transform: translateY(-8px);
-      box-shadow: 0 28px 64px rgba(0, 0, 0, .5)
-    }
-
-    .cs-card.featured {
-      grid-column: span 2
-    }
-
-    .cs-img {
-      height: 200px;
-      overflow: hidden;
-      position: relative;
-      background: linear-gradient(135deg, var(--surface2), var(--bg2));
-    }
-
-    .cs-card.featured .cs-img {
-      height: 280px
-    }
-
-    .cs-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      transition: transform .5s var(--ease)
-    }
-
-    .cs-card:hover .cs-img img {
-      transform: scale(1.04)
-    }
-
-    .cs-img-placeholder {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      gap: 10px;
-    }
-
-    .cs-img-placeholder i {
-      font-size: 3.5rem;
-      opacity: .2;
-      color: var(--acc)
-    }
-
-    .cs-overlay {
-      position: absolute;
-      inset: 0;
-      background: rgba(5, 7, 15, .75);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      opacity: 0;
-      transition: opacity .3s;
-    }
-
-    .cs-card:hover .cs-overlay {
-      opacity: 1
-    }
-
-    .cs-overlay-btn {
-      padding: 12px 28px;
-      background: var(--acc);
-      color: var(--bg);
-      border: none;
-      border-radius: 8px;
-      font-weight: 800;
-      font-size: .85rem;
-      transition: all .2s;
-    }
-
-    .cs-overlay-btn:hover {
-      filter: brightness(1.1);
-      transform: scale(1.04)
-    }
-
-    .cs-body {
-      padding: 28px;
-      flex: 1;
-      display: flex;
-      flex-direction: column
-    }
-
-    .cs-num {
-      font-family: var(--ff-en);
-      font-size: .95rem;
-      color: var(--acc);
-      opacity: .5;
-      margin-bottom: 8px
-    }
-
-    .cs-title {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 14px;
-      line-height: 1.25
-    }
-
-    .cs-meta {
-      display: flex;
-      gap: 20px;
-      margin-bottom: 18px;
-      flex-wrap: wrap
-    }
-
-    .cs-meta-item {
-      display: flex;
-      flex-direction: column;
-      gap: 2px
-    }
-
-    .cs-meta-label {
-      font-size: .65rem;
-      font-weight: 800;
-      color: var(--acc);
-      letter-spacing: .1em;
-      text-transform: uppercase
-    }
-
-    .cs-meta-val {
-      font-size: .85rem;
-      color: var(--white);
-      font-weight: 700
-    }
-
-    .cs-desc {
-      font-size: .88rem;
-      color: var(--w60);
-      line-height: 1.85;
-      flex: 1;
-      margin-bottom: 18px
-    }
-
-    .cs-results {
-      display: flex;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-bottom: 18px;
-    }
-
-    .cs-result {
-      background: rgba(16, 185, 129, .08);
-      border: 1px solid rgba(16, 185, 129, .25);
-      color: var(--emerald);
-      padding: 5px 14px;
-      border-radius: 6px;
-      font-size: .75rem;
-      font-weight: 800;
-    }
-
-    .cs-pills {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: auto
-    }
-
-    .cs-pill {
-      padding: 4px 12px;
-      border-radius: 50px;
-      background: rgba(0, 229, 255, .06);
-      color: var(--acc);
-      font-size: .68rem;
-      font-weight: 700;
-      border: 1px solid var(--border);
-    }
+    #projects { background: var(--bg2) }
+    .filter-bar { display: flex; gap: 10px; margin-bottom: 56px; flex-wrap: wrap }
+    .fb { padding: 8px 20px; border-radius: 50px; border: 1px solid var(--border); background: transparent; color: var(--w60); font-size: .78rem; font-weight: 700; transition: all .22s; }
+    .fb:hover, .fb.on { border-color: var(--acc); color: var(--acc); background: var(--glow) }
+    .cs-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px }
+    .cs-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; display: flex; flex-direction: column; transition: all .4s var(--ease); }
+    .cs-card:hover { border-color: var(--acc); transform: translateY(-8px); box-shadow: 0 28px 64px rgba(0, 0, 0, .5) }
+    .cs-card.featured { grid-column: span 2 }
+    .cs-img { height: 200px; overflow: hidden; position: relative; background: linear-gradient(135deg, var(--surface2), var(--bg2)); }
+    .cs-card.featured .cs-img { height: 280px }
+    .cs-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s var(--ease) }
+    .cs-card:hover .cs-img img { transform: scale(1.04) }
+    .cs-img-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 10px; }
+    .cs-img-placeholder i { font-size: 3.5rem; opacity: .2; color: var(--acc) }
+    .cs-overlay { position: absolute; inset: 0; background: rgba(5, 7, 15, .75); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .3s; }
+    .cs-card:hover .cs-overlay { opacity: 1 }
+    .cs-overlay-btn { padding: 12px 28px; background: var(--acc); color: var(--bg); border: none; border-radius: 8px; font-weight: 800; font-size: .85rem; transition: all .2s; }
+    .cs-overlay-btn:hover { filter: brightness(1.1); transform: scale(1.04) }
+    .cs-body { padding: 28px; flex: 1; display: flex; flex-direction: column }
+    .cs-num { font-family: var(--ff-en); font-size: .95rem; color: var(--acc); opacity: .5; margin-bottom: 8px }
+    .cs-title { font-size: 1.3rem; font-weight: 800; color: var(--white); margin-bottom: 14px; line-height: 1.25 }
+    .cs-meta { display: flex; gap: 20px; margin-bottom: 18px; flex-wrap: wrap }
+    .cs-meta-item { display: flex; flex-direction: column; gap: 2px }
+    .cs-meta-label { font-size: .65rem; font-weight: 800; color: var(--acc); letter-spacing: .1em; text-transform: uppercase }
+    .cs-meta-val { font-size: .85rem; color: var(--white); font-weight: 700 }
+    .cs-desc { font-size: .88rem; color: var(--w60); line-height: 1.85; flex: 1; margin-bottom: 18px }
+    .cs-results { display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 18px; }
+    .cs-result { background: rgba(16, 185, 129, .08); border: 1px solid rgba(16, 185, 129, .25); color: var(--emerald); padding: 5px 14px; border-radius: 6px; font-size: .75rem; font-weight: 800; }
+    .cs-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-top: auto }
+    .cs-pill { padding: 4px 12px; border-radius: 50px; background: rgba(0, 229, 255, .06); color: var(--acc); font-size: .68rem; font-weight: 700; border: 1px solid var(--border); }
 
     /* ════════════════════════════════════════════════════
    12. SKILLS
 ════════════════════════════════════════════════════ */
-    #skills {
-      background: var(--bg);
-      overflow: hidden
-    }
-
-    .ticker-w {
-      overflow: hidden;
-      border-top: 1px solid var(--border);
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 110px;
-      background: rgba(0, 229, 255, .025);
-    }
-
-    .ticker {
-      display: inline-flex;
-      animation: tick 28s linear infinite;
-      will-change: transform
-    }
-
-    @media(prefers-reduced-motion:reduce) {
-      .ticker {
-        animation: none
-      }
-    }
-
-    .ti {
-      font-family: var(--ff-en);
-      font-size: 1.3rem;
-      letter-spacing: .2em;
-      color: var(--acc);
-      padding: 16px 44px;
-      border-inline-end: 1px solid var(--border)
-    }
-
-    .ti.d {
-      color: var(--w35);
-      opacity: .4;
-      font-size: .85rem
-    }
-
-    @keyframes tick {
-      from {
-        transform: translateX(0)
-      }
-
-      to {
-        transform: translateX(-50%)
-      }
-    }
-
-    .sk-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 4px
-    }
-
-    .sk-blk {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 52px;
-      position: relative;
-      overflow: hidden;
-      transition: border-color .3s;
-    }
-
-    .sk-blk:hover {
-      border-color: var(--acc)
-    }
-
-    .sk-blk::after {
-      content: attr(data-e);
-      position: absolute;
-      bottom: -25px;
-      inset-inline-start: 20px;
-      font-size: 9rem;
-      opacity: .03;
-      line-height: 1;
-      pointer-events: none;
-      transition: opacity .3s, transform .4s;
-    }
-
-    .sk-blk:hover::after {
-      opacity: .09;
-      transform: scale(1.08) rotate(-4deg)
-    }
-
-    .sk-hd {
-      font-family: var(--ff-en);
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 36px;
-      padding-bottom: 18px;
-      position: relative;
-      color: var(--white);
-    }
-
-    .sk-hd::after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      inset-inline-end: 0;
-      width: 44px;
-      height: 3px;
-      background: linear-gradient(90deg, var(--acc), var(--acc2));
-    }
-
-    .sk-bars {
-      display: flex;
-      flex-direction: column;
-      gap: 18px;
-      margin-bottom: 32px
-    }
-
-    .bar-lb {
-      display: flex;
-      justify-content: space-between;
-      font-size: .76rem;
-      font-weight: 700;
-      color: var(--w60);
-      margin-bottom: 7px;
-    }
-
-    .bar-lb span:last-child {
-      color: var(--acc)
-    }
-
-    .btrk {
-      height: 4px;
-      background: var(--border2);
-      border-radius: 2px;
-      position: relative
-    }
-
-    .bfill {
-      position: absolute;
-      top: 0;
-      inset-inline-end: 0;
-      height: 100%;
-      width: 0%;
-      background: linear-gradient(270deg, var(--acc), var(--acc2));
-      transition: width 1.7s var(--ease);
-      border-radius: 2px;
-      box-shadow: 0 0 10px var(--glow);
-    }
-
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px
-    }
-
-    .tg {
-      padding: 6px 16px;
-      border: 1px solid var(--border2);
-      font-size: .7rem;
-      color: var(--w60);
-      border-radius: 50px;
-      font-weight: 700;
-      transition: all .2s;
-      cursor: default;
-    }
-
-    .tg:hover {
-      border-color: var(--acc);
-      color: var(--acc);
-      background: var(--glow)
-    }
+    #skills { background: var(--bg); overflow: hidden }
+    .ticker-w { overflow: hidden; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); margin-bottom: 110px; background: rgba(0, 229, 255, .025); }
+    .ticker { display: inline-flex; animation: tick 28s linear infinite; will-change: transform }
+    @media(prefers-reduced-motion:reduce) { .ticker { animation: none } }
+    .ti { font-family: var(--ff-en); font-size: 1.3rem; letter-spacing: .2em; color: var(--acc); padding: 16px 44px; border-inline-end: 1px solid var(--border) }
+    .ti.d { color: var(--w35); opacity: .4; font-size: .85rem }
+    @keyframes tick { from { transform: translateX(0) } to { transform: translateX(-50%) } }
+    .sk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px }
+    .sk-blk { background: var(--surface); border: 1px solid var(--border); padding: 52px; position: relative; overflow: hidden; transition: border-color .3s; }
+    .sk-blk:hover { border-color: var(--acc) }
+    .sk-blk::after { content: attr(data-e); position: absolute; bottom: -25px; inset-inline-start: 20px; font-size: 9rem; opacity: .03; line-height: 1; pointer-events: none; transition: opacity .3s, transform .4s; }
+    .sk-blk:hover::after { opacity: .09; transform: scale(1.08) rotate(-4deg) }
+    .sk-hd { font-family: var(--ff-en); font-size: 2.5rem; font-weight: 700; margin-bottom: 36px; padding-bottom: 18px; position: relative; color: var(--white); }
+    .sk-hd::after { content: ''; position: absolute; bottom: 0; inset-inline-end: 0; width: 44px; height: 3px; background: linear-gradient(90deg, var(--acc), var(--acc2)); }
+    .sk-bars { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px }
+    .bar-lb { display: flex; justify-content: space-between; font-size: .76rem; font-weight: 700; color: var(--w60); margin-bottom: 7px; }
+    .bar-lb span:last-child { color: var(--acc) }
+    .btrk { height: 4px; background: var(--border2); border-radius: 2px; position: relative }
+    .bfill { position: absolute; top: 0; inset-inline-end: 0; height: 100%; width: 0%; background: linear-gradient(270deg, var(--acc), var(--acc2)); transition: width 1.7s var(--ease); border-radius: 2px; box-shadow: 0 0 10px var(--glow); }
+    .tags { display: flex; flex-wrap: wrap; gap: 8px }
+    .tg { padding: 6px 16px; border: 1px solid var(--border2); font-size: .7rem; color: var(--w60); border-radius: 50px; font-weight: 700; transition: all .2s; cursor: default; }
+    .tg:hover { border-color: var(--acc); color: var(--acc); background: var(--glow) }
 
     /* ════════════════════════════════════════════════════
    13. TESTIMONIALS
 ════════════════════════════════════════════════════ */
-    #testimonials {
-      background: var(--bg2);
-      overflow: hidden
-    }
-
-    .t-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 24px
-    }
-
-    .t-card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 40px;
-      position: relative;
-      overflow: hidden;
-      transition: all .4s var(--ease);
-    }
-
-    .t-card:hover {
-      border-color: var(--acc);
-      transform: translateY(-6px);
-      box-shadow: 0 24px 56px rgba(0, 0, 0, .5)
-    }
-
-    .t-card.featured {
-      background: linear-gradient(135deg, rgba(0, 229, 255, .08), rgba(139, 92, 246, .06));
-      border-color: var(--border2);
-    }
-
-    .t-quote {
-      font-family: var(--ff-en);
-      font-size: 5rem;
-      color: var(--acc);
-      opacity: .12;
-      line-height: .8;
-      margin-bottom: 20px;
-    }
-
-    .t-text {
-      font-size: .95rem;
-      color: var(--w60);
-      line-height: 1.95;
-      margin-bottom: 28px;
-      font-style: italic
-    }
-
-    .t-rating {
-      font-size: 1.1rem;
-      color: var(--amber);
-      margin-bottom: 20px;
-      letter-spacing: 2px
-    }
-
-    .t-author {
-      display: flex;
-      align-items: center;
-      gap: 14px
-    }
-
-    .t-avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 50%;
-      background: var(--glow);
-      border: 2px solid var(--border2);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--acc);
-      flex-shrink: 0;
-    }
-
-    .t-name {
-      font-weight: 800;
-      font-size: .95rem;
-      color: var(--white)
-    }
-
-    .t-role {
-      font-size: .78rem;
-      color: var(--w60);
-      margin-top: 2px
-    }
+    #testimonials { background: var(--bg2); overflow: hidden }
+    .t-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px }
+    .t-card { background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 40px; position: relative; overflow: hidden; transition: all .4s var(--ease); }
+    .t-card:hover { border-color: var(--acc); transform: translateY(-6px); box-shadow: 0 24px 56px rgba(0, 0, 0, .5) }
+    .t-card.featured { background: linear-gradient(135deg, rgba(0, 229, 255, .08), rgba(139, 92, 246, .06)); border-color: var(--border2); }
+    .t-quote { font-family: var(--ff-en); font-size: 5rem; color: var(--acc); opacity: .12; line-height: .8; margin-bottom: 20px; }
+    .t-text { font-size: .95rem; color: var(--w60); line-height: 1.95; margin-bottom: 28px; font-style: italic }
+    .t-rating { font-size: 1.1rem; color: var(--amber); margin-bottom: 20px; letter-spacing: 2px }
+    .t-author { display: flex; align-items: center; gap: 14px }
+    .t-avatar { width: 48px; height: 48px; border-radius: 50%; background: var(--glow); border: 2px solid var(--border2); display: flex; align-items: center; justify-content: center; font-size: 1.3rem; font-weight: 800; color: var(--acc); flex-shrink: 0; }
+    .t-name { font-weight: 800; font-size: .95rem; color: var(--white) }
+    .t-role { font-size: .78rem; color: var(--w60); margin-top: 2px }
 
     /* ════════════════════════════════════════════════════
    14. TEACHING
 ════════════════════════════════════════════════════ */
-    #teaching {
-      background: var(--bg);
-      overflow: hidden
-    }
-
-    .teach-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3px
-    }
-
-    .tc {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      padding: 48px;
-      position: relative;
-      overflow: hidden;
-      transition: all .4s var(--ease);
-    }
-
-    .tc:first-child {
-      grid-column: 1/3;
-      background: linear-gradient(135deg, var(--acc), var(--acc2));
-      border: none;
-    }
-
-    .tc:not(:first-child):hover {
-      border-color: var(--acc);
-      transform: translateY(-6px)
-    }
-
-    .tc-bg {
-      position: absolute;
-      top: 10px;
-      inset-inline-end: 20px;
-      font-family: var(--ff-en);
-      font-size: 8rem;
-      opacity: .06;
-      line-height: 1;
-      pointer-events: none;
-      color: var(--bg);
-    }
-
-    .tc-ico {
-      font-size: 2.2rem;
-      margin-bottom: 18px
-    }
-
-    .tc-title {
-      font-size: 2rem;
-      font-weight: 800;
-      margin-bottom: 16px;
-      font-family: var(--ff-en)
-    }
-
-    .tc:first-child .tc-title,
-    .tc:first-child .tc-desc,
-    .tc:first-child .tc-badge {
-      color: var(--bg)
-    }
-
-    .tc:not(:first-child) .tc-title {
-      color: var(--white)
-    }
-
-    .tc-desc {
-      font-size: .95rem;
-      line-height: 1.9;
-      margin-bottom: 22px
-    }
-
-    .tc:not(:first-child) .tc-desc {
-      color: var(--w60)
-    }
-
-    .tc-badge {
-      display: inline-block;
-      padding: 8px 20px;
-      border-radius: 50px;
-      font-size: .74rem;
-      font-weight: 800;
-      border: 2px solid;
-    }
-
-    .tc:first-child .tc-badge {
-      border-color: rgba(0, 0, 0, .3);
-      background: rgba(0, 0, 0, .12)
-    }
-
-    .tc:not(:first-child) .tc-badge {
-      border-color: var(--border2);
-      color: var(--acc)
-    }
+    #teaching { background: var(--bg); overflow: hidden }
+    .teach-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3px }
+    .tc { background: var(--surface); border: 1px solid var(--border); padding: 48px; position: relative; overflow: hidden; transition: all .4s var(--ease); }
+    .tc:first-child { grid-column: 1/3; background: linear-gradient(135deg, var(--acc), var(--acc2)); border: none; }
+    .tc:not(:first-child):hover { border-color: var(--acc); transform: translateY(-6px) }
+    .tc-bg { position: absolute; top: 10px; inset-inline-end: 20px; font-family: var(--ff-en); font-size: 8rem; opacity: .06; line-height: 1; pointer-events: none; color: var(--bg); }
+    .tc-ico { font-size: 2.2rem; margin-bottom: 18px }
+    .tc-title { font-size: 2rem; font-weight: 800; margin-bottom: 16px; font-family: var(--ff-en) }
+    .tc:first-child .tc-title, .tc:first-child .tc-desc, .tc:first-child .tc-badge { color: var(--bg) }
+    .tc:not(:first-child) .tc-title { color: var(--white) }
+    .tc-desc { font-size: .95rem; line-height: 1.9; margin-bottom: 22px }
+    .tc:not(:first-child) .tc-desc { color: var(--w60) }
+    .tc-badge { display: inline-block; padding: 8px 20px; border-radius: 50px; font-size: .74rem; font-weight: 800; border: 2px solid; }
+    .tc:first-child .tc-badge { border-color: rgba(0, 0, 0, .3); background: rgba(0, 0, 0, .12) }
+    .tc:not(:first-child) .tc-badge { border-color: var(--border2); color: var(--acc) }
 
     /* ════════════════════════════════════════════════════
    15. TIMELINE
 ════════════════════════════════════════════════════ */
-    #timeline {
-      background: var(--bg2)
-    }
-
-    .tl-track {
-      position: relative
-    }
-
-    .tl-line {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2px;
-      background: linear-gradient(to bottom, var(--acc) 0%, var(--acc2) 50%, transparent 100%);
-      border-radius: 2px;
-    }
-
-    [dir="rtl"] .tl-line {
-      left: auto;
-      right: 50%;
-      transform: translateX(50%)
-    }
-
-    .tl-items {
-      display: flex;
-      flex-direction: column
-    }
-
-    .tl-item {
-      display: grid;
-      grid-template-columns: 1fr 80px 1fr;
-      align-items: center;
-      gap: 0;
-    }
-
-    .tl-l {
-      padding: 40px 60px 40px 0;
-      text-align: left
-    }
-
-    .tl-r {
-      padding: 40px 0 40px 60px;
-      text-align: right
-    }
-
-    [dir="rtl"] .tl-l {
-      padding: 40px 0 40px 60px;
-      text-align: right
-    }
-
-    [dir="rtl"] .tl-r {
-      padding: 40px 60px 40px 0;
-      text-align: left
-    }
-
-    .tl-emp {
-      min-height: 100px
-    }
-
-    .tl-mid {
-      display: flex;
-      justify-content: center;
-      padding: 40px 0
-    }
-
-    .tl-dot {
-      width: 18px;
-      height: 18px;
-      border-radius: 50%;
-      border: 3px solid var(--acc);
-      background: var(--bg2);
-      position: relative;
-      z-index: 2;
-      flex-shrink: 0;
-      box-shadow: 0 0 0 6px rgba(0, 229, 255, .08);
-      transition: background .3s, box-shadow .3s;
-    }
-
-    .tl-item:hover .tl-dot {
-      background: var(--acc);
-      box-shadow: 0 0 0 10px var(--glow)
-    }
-
-    .tl-yr {
-      font-size: .72rem;
-      font-weight: 800;
-      color: var(--acc);
-      letter-spacing: .14em;
-      margin-bottom: 10px;
-      text-transform: uppercase
-    }
-
-    .tl-role {
-      font-size: clamp(1.1rem, 2vw, 1.7rem);
-      font-weight: 800;
-      color: var(--white);
-      margin-bottom: 6px;
-      font-family: var(--ff-en)
-    }
-
-    .tl-org {
-      font-size: .82rem;
-      color: var(--acc);
-      font-weight: 700;
-      margin-bottom: 12px
-    }
-
-    .tl-desc {
-      font-size: .92rem;
-      color: var(--w60);
-      line-height: 1.8
-    }
+    #timeline { background: var(--bg2) }
+    .tl-track { position: relative }
+    .tl-line { position: absolute; top: 0; bottom: 0; left: 50%; transform: translateX(-50%); width: 2px; background: linear-gradient(to bottom, var(--acc) 0%, var(--acc2) 50%, transparent 100%); border-radius: 2px; }
+    [dir="rtl"] .tl-line { left: auto; right: 50%; transform: translateX(50%) }
+    .tl-items { display: flex; flex-direction: column }
+    .tl-item { display: grid; grid-template-columns: 1fr 80px 1fr; align-items: center; gap: 0; }
+    .tl-l { padding: 40px 60px 40px 0; text-align: left }
+    .tl-r { padding: 40px 0 40px 60px; text-align: right }
+    [dir="rtl"] .tl-l { padding: 40px 0 40px 60px; text-align: right }
+    [dir="rtl"] .tl-r { padding: 40px 60px 40px 0; text-align: left }
+    .tl-emp { min-height: 100px }
+    .tl-mid { display: flex; justify-content: center; padding: 40px 0 }
+    .tl-dot { width: 18px; height: 18px; border-radius: 50%; border: 3px solid var(--acc); background: var(--bg2); position: relative; z-index: 2; flex-shrink: 0; box-shadow: 0 0 0 6px rgba(0, 229, 255, .08); transition: background .3s, box-shadow .3s; }
+    .tl-item:hover .tl-dot { background: var(--acc); box-shadow: 0 0 0 10px var(--glow) }
+    .tl-yr { font-size: .72rem; font-weight: 800; color: var(--acc); letter-spacing: .14em; margin-bottom: 10px; text-transform: uppercase }
+    .tl-role { font-size: clamp(1.1rem, 2vw, 1.7rem); font-weight: 800; color: var(--white); margin-bottom: 6px; font-family: var(--ff-en) }
+    .tl-org { font-size: .82rem; color: var(--acc); font-weight: 700; margin-bottom: 12px }
+    .tl-desc { font-size: .92rem; color: var(--w60); line-height: 1.8 }
 
     /* ════════════════════════════════════════════════════
    16. CONTACT
 ════════════════════════════════════════════════════ */
-    #contact {
-      background: var(--bg);
-      min-height: 85vh;
-      display: flex;
-      align-items: center
-    }
-
-    .c-inner {
-      width: 100%;
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 120px 80px
-    }
-
-    .c-big {
-      font-family: var(--ff-en);
-      font-size: clamp(3.5rem, 9.5vw, 13rem);
-      line-height: .82;
-      letter-spacing: -.03em;
-      margin-bottom: 80px;
-      color: var(--white);
-    }
-
-    .c-big .out {
-      color: transparent;
-      -webkit-text-stroke: 2px var(--w35);
-      opacity: .5
-    }
-
-    .c-big .ac {
-      color: var(--acc)
-    }
-
-    .c-split {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      border-top: 1px solid var(--border);
-      padding-top: 64px
-    }
-
-    .c-sub {
-      font-size: 1.05rem;
-      color: var(--w60);
-      line-height: 1.9;
-      max-width: 440px;
-      margin-bottom: 40px
-    }
-
-    .c-sub strong {
-      color: var(--white)
-    }
-
-    .wa-cta {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 22px 32px;
-      background: rgba(37, 211, 102, .08);
-      border: 2px solid rgba(37, 211, 102, .3);
-      border-radius: 14px;
-      color: var(--white);
-      margin-bottom: 20px;
-      transition: all .35s var(--ease);
-    }
-
-    .wa-cta:hover {
-      background: rgba(37, 211, 102, .15);
-      border-color: rgba(37, 211, 102, .6);
-      transform: translateX(-8px)
-    }
-
-    [dir="rtl"] .wa-cta:hover {
-      transform: translateX(8px)
-    }
-
-    .wa-ico {
-      font-size: 2rem;
-      color: #25d366
-    }
-
-    .wa-title {
-      font-weight: 800;
-      font-size: 1rem;
-      margin-bottom: 2px;
-      color: var(--white)
-    }
-
-    .wa-sub {
-      font-size: .82rem;
-      color: var(--w60)
-    }
-
-    .wa-arr {
-      margin-inline-start: auto;
-      font-size: 1.2rem;
-      opacity: 0;
-      transition: opacity .3s;
-      color: #25d366
-    }
-
-    .wa-cta:hover .wa-arr {
-      opacity: 1
-    }
-
-    .c-links {
-      display: flex;
-      flex-direction: column;
-      gap: 4px
-    }
-
-    .c-link {
-      display: flex;
-      align-items: center;
-      gap: 22px;
-      padding: 22px 32px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 12px;
-      color: var(--white);
-      transition: all .4s var(--ease);
-    }
-
-    .c-link:hover {
-      background: var(--acc);
-      color: var(--bg);
-      border-color: var(--acc);
-      transform: translateX(-12px);
-      box-shadow: 0 12px 36px var(--glow)
-    }
-
-    [dir="rtl"] .c-link:hover {
-      transform: translateX(12px)
-    }
-
-    .c-link:hover .cl-arr,
-    .c-link:hover .cl-label,
-    .c-link:hover .cl-val {
-      color: var(--bg)
-    }
-
-    .cl-ico {
-      font-size: 1.25rem;
-      width: 26px;
-      text-align: center;
-      flex-shrink: 0
-    }
-
-    .cl-label {
-      font-size: .68rem;
-      font-weight: 800;
-      opacity: .6;
-      letter-spacing: .1em;
-      margin-bottom: 4px
-    }
-
-    .cl-val {
-      font-size: .93rem;
-      font-weight: 600
-    }
-
-    .cl-arr {
-      margin-inline-start: auto;
-      font-size: 1.1rem;
-      opacity: 0;
-      transition: opacity .3s
-    }
-
-    .c-link:hover .cl-arr {
-      opacity: 1
-    }
-
-    .c-form {
-      display: flex;
-      flex-direction: column;
-      gap: 14px
-    }
-
-    .c-field {
-      padding: 15px 20px;
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      color: var(--white);
-      font-size: .93rem;
-      outline: none;
-      transition: border-color .2s;
-      resize: vertical;
-      font-family: var(--ff);
-    }
-
-    .c-field::placeholder {
-      color: var(--w35)
-    }
-
-    .c-field:focus {
-      border-color: var(--acc)
-    }
-
-    textarea.c-field {
-      min-height: 120px
-    }
-
-    .c-submit {
-      padding: 16px;
-      background: var(--acc);
-      color: var(--bg);
-      border: none;
-      border-radius: 10px;
-      font-weight: 900;
-      font-size: .95rem;
-      font-family: var(--ff);
-      transition: all .3s;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    }
-
-    .c-submit:hover {
-      filter: brightness(1.08);
-      transform: translateY(-2px);
-      box-shadow: 0 14px 32px var(--glow)
-    }
-
-    .c-success {
-      display: none;
-      text-align: center;
-      padding: 20px;
-      color: var(--emerald);
-      font-weight: 800;
-      font-size: 1rem;
-      background: rgba(16, 185, 129, .08);
-      border: 1px solid rgba(16, 185, 129, .25);
-      border-radius: 10px;
-    }
+    #contact { background: var(--bg); min-height: 85vh; display: flex; align-items: center }
+    .c-inner { width: 100%; max-width: 1440px; margin: 0 auto; padding: 120px 80px }
+    .c-big { font-family: var(--ff-en); font-size: clamp(3.5rem, 9.5vw, 13rem); line-height: .82; letter-spacing: -.03em; margin-bottom: 80px; color: var(--white); }
+    .c-big .out { color: transparent; -webkit-text-stroke: 2px var(--w35); opacity: .5 }
+    .c-big .ac { color: var(--acc) }
+    .c-split { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; border-top: 1px solid var(--border); padding-top: 64px }
+    .c-sub { font-size: 1.05rem; color: var(--w60); line-height: 1.9; max-width: 440px; margin-bottom: 40px }
+    .c-sub strong { color: var(--white) }
+    .wa-cta { display: flex; align-items: center; gap: 16px; padding: 22px 32px; background: rgba(37, 211, 102, .08); border: 2px solid rgba(37, 211, 102, .3); border-radius: 14px; color: var(--white); margin-bottom: 20px; transition: all .35s var(--ease); }
+    .wa-cta:hover { background: rgba(37, 211, 102, .15); border-color: rgba(37, 211, 102, .6); transform: translateX(-8px) }
+    [dir="rtl"] .wa-cta:hover { transform: translateX(8px) }
+    .wa-ico { font-size: 2rem; color: #25d366 }
+    .wa-title { font-weight: 800; font-size: 1rem; margin-bottom: 2px; color: var(--white) }
+    .wa-sub { font-size: .82rem; color: var(--w60) }
+    .wa-arr { margin-inline-start: auto; font-size: 1.2rem; opacity: 0; transition: opacity .3s; color: #25d366 }
+    .wa-cta:hover .wa-arr { opacity: 1 }
+    .c-links { display: flex; flex-direction: column; gap: 4px }
+    .c-link { display: flex; align-items: center; gap: 22px; padding: 22px 32px; background: var(--surface); border: 1px solid var(--border); border-radius: 12px; color: var(--white); transition: all .4s var(--ease); }
+    .c-link:hover { background: var(--acc); color: var(--bg); border-color: var(--acc); transform: translateX(-12px); box-shadow: 0 12px 36px var(--glow) }
+    [dir="rtl"] .c-link:hover { transform: translateX(12px) }
+    .c-link:hover .cl-arr, .c-link:hover .cl-label, .c-link:hover .cl-val { color: var(--bg) }
+    .cl-ico { font-size: 1.25rem; width: 26px; text-align: center; flex-shrink: 0 }
+    .cl-label { font-size: .68rem; font-weight: 800; opacity: .6; letter-spacing: .1em; margin-bottom: 4px }
+    .cl-val { font-size: .93rem; font-weight: 600 }
+    .cl-arr { margin-inline-start: auto; font-size: 1.1rem; opacity: 0; transition: opacity .3s }
+    .c-link:hover .cl-arr { opacity: 1 }
+    .c-form { display: flex; flex-direction: column; gap: 14px }
+    .c-field { padding: 15px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px; color: var(--white); font-size: .93rem; outline: none; transition: border-color .2s; resize: vertical; font-family: var(--ff); }
+    .c-field::placeholder { color: var(--w35) }
+    .c-field:focus { border-color: var(--acc) }
+    textarea.c-field { min-height: 120px }
+    .c-submit { padding: 16px; background: var(--acc); color: var(--bg); border: none; border-radius: 10px; font-weight: 900; font-size: .95rem; font-family: var(--ff); transition: all .3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .c-submit:hover { filter: brightness(1.08); transform: translateY(-2px); box-shadow: 0 14px 32px var(--glow) }
+    .c-success { display: none; text-align: center; padding: 20px; color: var(--emerald); font-weight: 800; font-size: 1rem; background: rgba(16, 185, 129, .08); border: 1px solid rgba(16, 185, 129, .25); border-radius: 10px; }
 
     /* ════════════════════════════════════════════════════
    17. FOOTER
 ════════════════════════════════════════════════════ */
-    footer {
-      padding: 38px 80px;
-      border-top: 1px solid var(--border);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--bg2);
-    }
-
-    .f-copy {
-      font-size: .72rem;
-      color: var(--w35);
-      letter-spacing: .1em
-    }
-
-    .f-brand {
-      font-family: var(--ff-en);
-      font-size: 1rem;
-      letter-spacing: .2em;
-      color: var(--acc)
-    }
-
-    #btt {
-      position: fixed;
-      bottom: 32px;
-      inset-inline-start: 32px;
-      width: 46px;
-      height: 46px;
-      border-radius: 50%;
-      background: var(--acc);
-      color: var(--bg);
-      border: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1rem;
-      z-index: 500;
-      cursor: pointer;
-      opacity: 0;
-      transform: translateY(16px);
-      transition: all .3s;
-      box-shadow: 0 8px 24px var(--glow);
-    }
-
-    #btt.show {
-      opacity: 1;
-      transform: none
-    }
-
-    #btt:hover {
-      transform: translateY(-4px);
-      filter: brightness(1.1)
-    }
+    footer { padding: 38px 80px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; background: var(--bg2); }
+    .f-copy { font-size: .72rem; color: var(--w35); letter-spacing: .1em }
+    .f-brand { font-family: var(--ff-en); font-size: 1rem; letter-spacing: .2em; color: var(--acc) }
+    #btt { position: fixed; bottom: 32px; inset-inline-start: 32px; width: 46px; height: 46px; border-radius: 50%; background: var(--acc); color: var(--bg); border: none; display: flex; align-items: center; justify-content: center; font-size: 1rem; z-index: 500; cursor: pointer; opacity: 0; transform: translateY(16px); transition: all .3s; box-shadow: 0 8px 24px var(--glow); }
+    #btt.show { opacity: 1; transform: none }
+    #btt:hover { transform: translateY(-4px); filter: brightness(1.1) }
 
     /* ════════════════════════════════════════════════════
    18. PROJECT MODAL
 ════════════════════════════════════════════════════ */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(5, 7, 15, .88);
-      z-index: 5000;
-      display: none;
-      align-items: center;
-      justify-content: center;
-      padding: 24px;
-      backdrop-filter: blur(10px);
-    }
-
-    .modal.open {
-      display: flex
-    }
-
-    .modal-box {
-      background: var(--surface);
-      border: 1px solid var(--border2);
-      border-radius: 20px;
-      max-width: 700px;
-      width: 100%;
-      max-height: 92vh;
-      overflow-y: auto;
-      position: relative;
-      scrollbar-width: thin;
-      scrollbar-color: var(--acc) transparent;
-    }
-
-    .modal-img {
-      height: 240px;
-      overflow: hidden;
-      border-radius: 20px 20px 0 0
-    }
-
-    .modal-img img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover
-    }
-
-    .modal-img-ph {
-      height: 100%;
-      background: linear-gradient(135deg, var(--surface2), var(--bg2));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .modal-img-ph i {
-      font-size: 5rem;
-      color: var(--acc);
-      opacity: .25
-    }
-
-    .modal-bdy {
-      padding: 36px
-    }
-
-    .modal-title {
-      font-family: var(--ff-en);
-      font-size: 2rem;
-      font-weight: 700;
-      margin-bottom: 16px;
-      color: var(--white)
-    }
-
-    .modal-section {
-      margin-bottom: 24px
-    }
-
-    .modal-label {
-      font-size: .68rem;
-      font-weight: 800;
-      color: var(--acc);
-      letter-spacing: .14em;
-      text-transform: uppercase;
-      margin-bottom: 10px
-    }
-
-    .modal-text {
-      font-size: .93rem;
-      color: var(--w60);
-      line-height: 1.9
-    }
-
-    .modal-meta-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
-      margin-bottom: 24px
-    }
-
-    .m-meta {
-      background: var(--bg2);
-      border-radius: 10px;
-      padding: 15px 20px
-    }
-
-    .m-meta-lbl {
-      font-size: .67rem;
-      font-weight: 800;
-      color: var(--acc);
-      letter-spacing: .1em;
-      margin-bottom: 5px
-    }
-
-    .m-meta-val {
-      font-size: .88rem;
-      color: var(--white);
-      font-weight: 700
-    }
-
-    .m-results {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 24px
-    }
-
-    .m-result {
-      background: rgba(16, 185, 129, .08);
-      border: 1px solid rgba(16, 185, 129, .25);
-      color: var(--emerald);
-      padding: 7px 16px;
-      border-radius: 8px;
-      font-size: .8rem;
-      font-weight: 800;
-    }
-
-    .modal-close {
-      position: absolute;
-      top: 14px;
-      inset-inline-end: 14px;
-      width: 36px;
-      height: 36px;
-      border-radius: 50%;
-      background: rgba(0, 0, 0, .5);
-      border: none;
-      color: var(--white);
-      font-size: .95rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: background .2s;
-    }
-
-    .modal-close:hover {
-      background: var(--acc);
-      color: var(--bg)
-    }
+    .modal { position: fixed; inset: 0; background: rgba(5, 7, 15, .88); z-index: 5000; display: none; align-items: center; justify-content: center; padding: 24px; backdrop-filter: blur(10px); }
+    .modal.open { display: flex }
+    .modal-box { background: var(--surface); border: 1px solid var(--border2); border-radius: 20px; max-width: 700px; width: 100%; max-height: 92vh; overflow-y: auto; position: relative; scrollbar-width: thin; scrollbar-color: var(--acc) transparent; }
+    .modal-img { height: 240px; overflow: hidden; border-radius: 20px 20px 0 0 }
+    .modal-img img { width: 100%; height: 100%; object-fit: cover }
+    .modal-img-ph { height: 100%; background: linear-gradient(135deg, var(--surface2), var(--bg2)); display: flex; align-items: center; justify-content: center; }
+    .modal-img-ph i { font-size: 5rem; color: var(--acc); opacity: .25 }
+    .modal-bdy { padding: 36px }
+    .modal-title { font-family: var(--ff-en); font-size: 2rem; font-weight: 700; margin-bottom: 16px; color: var(--white) }
+    .modal-section { margin-bottom: 24px }
+    .modal-label { font-size: .68rem; font-weight: 800; color: var(--acc); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 10px }
+    .modal-text { font-size: .93rem; color: var(--w60); line-height: 1.9 }
+    .modal-meta-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px }
+    .m-meta { background: var(--bg2); border-radius: 10px; padding: 15px 20px }
+    .m-meta-lbl { font-size: .67rem; font-weight: 800; color: var(--acc); letter-spacing: .1em; margin-bottom: 5px }
+    .m-meta-val { font-size: .88rem; color: var(--white); font-weight: 700 }
+    .m-results { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 24px }
+    .m-result { background: rgba(16, 185, 129, .08); border: 1px solid rgba(16, 185, 129, .25); color: var(--emerald); padding: 7px 16px; border-radius: 8px; font-size: .8rem; font-weight: 800; }
+    .modal-close { position: absolute; top: 14px; inset-inline-end: 14px; width: 36px; height: 36px; border-radius: 50%; background: rgba(0, 0, 0, .5); border: none; color: var(--white); font-size: .95rem; display: flex; align-items: center; justify-content: center; transition: background .2s; }
+    .modal-close:hover { background: var(--acc); color: var(--bg) }
 
     /* ════════════════════════════════════════════════════
    19. RESPONSIVE
 ════════════════════════════════════════════════════ */
     @media(max-width:1200px) {
-      .svc-grid {
-        grid-template-columns: repeat(2, 1fr)
-      }
-
-      .cs-grid {
-        grid-template-columns: 1fr 1fr
-      }
-
-      .cs-card.featured {
-        grid-column: span 2
-      }
-
-      .how-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 40px
-      }
-
-      .how-grid::before {
-        display: none
-      }
-
-      .t-grid {
-        grid-template-columns: 1fr 1fr
-      }
-
-      .sk-grid {
-        grid-template-columns: 1fr
-      }
+      .svc-grid { grid-template-columns: repeat(2, 1fr) }
+      .cs-grid { grid-template-columns: 1fr 1fr }
+      .cs-card.featured { grid-column: span 2 }
+      .how-grid { grid-template-columns: repeat(2, 1fr); gap: 40px }
+      .how-grid::before { display: none }
+      .t-grid { grid-template-columns: 1fr 1fr }
+      .sk-grid { grid-template-columns: 1fr }
     }
-
     @media(max-width:1024px) {
-      nav {
-        padding: 0 28px
-      }
-
-      .nav-links {
-        display: none
-      }
-
-      .hbg {
-        display: flex
-      }
-
-      .hero-body {
-        grid-template-columns: 1fr;
-        padding: 50px 40px 30px;
-        text-align: right
-      }
-
-      [dir="ltr"] .hero-body {
-        text-align: left
-      }
-
-      .hero-visual {
-        display: none
-      }
-
-      .inn {
-        padding: 100px 40px
-      }
-
-      .c-split {
-        grid-template-columns: 1fr;
-        gap: 50px
-      }
-
-      .tl-item {
-        grid-template-columns: 1fr 48px 1fr
-      }
-
-      .tl-l,
-      .tl-r {
-        padding: 28px 24px
-      }
+      nav { padding: 0 28px }
+      .nav-links { display: none }
+      .hbg { display: flex }
+      .hero-body { grid-template-columns: 1fr; padding: 50px 40px 30px; text-align: right }
+      [dir="ltr"] .hero-body { text-align: left }
+      .hero-visual { display: none }
+      .inn { padding: 100px 40px }
+      .c-split { grid-template-columns: 1fr; gap: 50px }
+      .tl-item { grid-template-columns: 1fr 48px 1fr }
+      .tl-l, .tl-r { padding: 28px 24px }
     }
-
     @media(max-width:768px) {
-      html {
-        font-size: 15px
-      }
-
-      nav {
-        height: 58px;
-        padding: 0 16px
-      }
-
-      .hero-strip {
-        grid-template-columns: 1fr 1fr
-      }
-
-      .strip-cell {
-        padding: 22px 18px
-      }
-
-      .inn {
-        padding: 72px 20px
-      }
-
-      .sec-h {
-        font-size: clamp(2.8rem, 12vw, 5rem);
-        margin-bottom: 50px
-      }
-
-      .svc-grid {
-        grid-template-columns: 1fr
-      }
-
-      .cs-grid {
-        grid-template-columns: 1fr
-      }
-
-      .cs-card.featured {
-        grid-column: span 1
-      }
-
-      .teach-grid {
-        grid-template-columns: 1fr
-      }
-
-      .tc:first-child {
-        grid-column: 1
-      }
-
-      .how-grid {
-        grid-template-columns: 1fr;
-        gap: 32px
-      }
-
-      .t-grid {
-        grid-template-columns: 1fr
-      }
-
-      .tl-item {
-        grid-template-columns: 1fr
-      }
-
-      .tl-line {
-        display: none
-      }
-
-      .tl-l,
-      .tl-r { 
-        padding: 0 0 0 20px;
-        border-inline-start: 3px solid var(--acc);
-        text-align: start;
-        margin-bottom: 32px
-      }
-
-      [dir="rtl"] .tl-l,
-      [dir="rtl"] .tl-r {
-        padding: 0 20px 0 0;
-        border-inline-start: none;
-        border-inline-end: 3px solid var(--acc)
-      }
-
-      .tl-emp,
-      .tl-mid {
-        display: none
-      }
-
-      .tl-item {
-        display: block
-      }
-
-      .c-big {
-        font-size: clamp(3rem, 14vw, 6rem);
-        margin-bottom: 50px
-      }
-
-      .c-inner {
-        padding: 90px 20px 60px
-      }
-
-      footer {
-        flex-direction: column;
-        gap: 12px;
-        padding: 28px 20px;
-        text-align: center
-      }
-
-      .sk-blk {
-        padding: 32px 24px
-      }
-
-      .modal-meta-grid {
-        grid-template-columns: 1fr
-      }
-
-      .le-cards {
-        flex-direction: column;
-        align-items: center
-      }
-
-      .le-card {
-        width: 100%;
-        max-width: 320px
-      }
+      html { font-size: 15px }
+      nav { height: 58px; padding: 0 16px }
+      .hero-strip { grid-template-columns: 1fr 1fr }
+      .strip-cell { padding: 22px 18px }
+      .inn { padding: 72px 20px }
+      .sec-h { font-size: clamp(2.8rem, 12vw, 5rem); margin-bottom: 50px }
+      .svc-grid { grid-template-columns: 1fr }
+      .cs-grid { grid-template-columns: 1fr }
+      .cs-card.featured { grid-column: span 1 }
+      .teach-grid { grid-template-columns: 1fr }
+      .tc:first-child { grid-column: 1 }
+      .how-grid { grid-template-columns: 1fr; gap: 32px }
+      .t-grid { grid-template-columns: 1fr }
+      .tl-item { grid-template-columns: 1fr }
+      .tl-line { display: none }
+      .tl-l, .tl-r { padding: 0 0 0 20px; border-inline-start: 3px solid var(--acc); text-align: start; margin-bottom: 32px }
+      [dir="rtl"] .tl-l, [dir="rtl"] .tl-r { padding: 0 20px 0 0; border-inline-start: none; border-inline-end: 3px solid var(--acc) }
+      .tl-emp, .tl-mid { display: none }
+      .tl-item { display: block }
+      .c-big { font-size: clamp(3rem, 14vw, 6rem); margin-bottom: 50px }
+      .c-inner { padding: 90px 20px 60px }
+      footer { flex-direction: column; gap: 12px; padding: 28px 20px; text-align: center }
+      .sk-blk { padding: 32px 24px }
+      .modal-meta-grid { grid-template-columns: 1fr }
+      .le-cards { flex-direction: column; align-items: center }
+      .le-card { width: 100%; max-width: 320px }
     }
-
     @media(max-width:400px) {
-
-      .nav-right .cv-btn,
-      .nav-right .mode-pill {
-        display: none
-      }
-
-      .c-big {
-        font-size: clamp(2.8rem, 13vw, 5rem)
-      }
+      .nav-right .cv-btn, .nav-right .mode-pill { display: none }
+      .c-big { font-size: clamp(2.8rem, 13vw, 5rem) }
     }
-
   </style>
 </head>
 
@@ -2946,13 +772,11 @@
 
   <div id="spb"></div>
 
-  <!-- ══════════════ STEP 1: VISITOR TYPE SELECTION ══════════════ -->
   <div id="visitor-entry">
     <div class="ve-inner">
       <div class="ve-logo">MKT</div>
       <div class="ve-tagline">Flutter Developer · Software Engineer · Tech Instructor</div>
 
-      <!-- Language switcher on visitor entry page -->
       <div class="ve-lang-row" id="ve-lang-row">
         <button class="ve-lang-btn on" onclick="switchEntryLang('ar')">العربية</button>
         <button class="ve-lang-btn" onclick="switchEntryLang('en')">English</button>
@@ -2964,60 +788,30 @@
       </div>
 
       <div class="ve-cards">
-        <!-- RECRUITER CARD -->
         <div class="ve-card recruiter-card" data-num="01" onclick="selectVisitor('recruiter')" id="vc-recruiter">
-          <div class="ve-icon-wrap">
-            <i class="fas fa-briefcase"></i>
-          </div>
+          <div class="ve-icon-wrap"><i class="fas fa-briefcase"></i></div>
           <div class="ve-card-title" id="vct-recruiter">RECRUITER</div>
           <div class="ve-card-subtitle" id="vcs-recruiter">مسؤول توظيف / HR</div>
-          <div class="ve-card-desc" id="vcd-recruiter">
-            أبحث عن مطوّر Flutter لفريقي أو شركتي
-          </div>
+          <div class="ve-card-desc" id="vcd-recruiter">أبحث عن مطوّر Flutter لفريقي أو شركتي</div>
           <div class="ve-feats" id="vcf-recruiter">
-            <div class="ve-feat">
-              <div class="ve-feat-dot"></div><span>السيرة الذاتية والخبرات</span>
-            </div>
-            <div class="ve-feat">
-              <div class="ve-feat-dot"></div><span>مستوى المهارات التقنية</span>
-            </div>
-            <div class="ve-feat">
-              <div class="ve-feat-dot"></div><span>المسار المهني</span>
-            </div>
+            <div class="ve-feat"><div class="ve-feat-dot"></div><span>السيرة الذاتية والخبرات</span></div>
+            <div class="ve-feat"><div class="ve-feat-dot"></div><span>مستوى المهارات التقنية</span></div>
+            <div class="ve-feat"><div class="ve-feat-dot"></div><span>المسار المهني</span></div>
           </div>
-          <button class="ve-cta" id="vccta-recruiter">
-            <i class="fas fa-eye"></i>
-            <span>عرض نسخة المجنّدين</span>
-            <i class="fas fa-arrow-left ve-cta-arr"></i>
-          </button>
+          <button class="ve-cta" id="vccta-recruiter"><i class="fas fa-eye"></i><span>عرض نسخة المجنّدين</span><i class="fas fa-arrow-left ve-cta-arr"></i></button>
         </div>
 
-        <!-- CLIENT CARD -->
         <div class="ve-card client-card" data-num="02" onclick="selectVisitor('client')" id="vc-client">
-          <div class="ve-icon-wrap">
-            <i class="fas fa-lightbulb"></i>
-          </div>
+          <div class="ve-icon-wrap"><i class="fas fa-lightbulb"></i></div>
           <div class="ve-card-title" id="vct-client">CLIENT</div>
           <div class="ve-card-subtitle" id="vcs-client">عميل / صاحب مشروع</div>
-          <div class="ve-card-desc" id="vcd-client">
-            أريد بناء تطبيق موبايل أو لدي مشروع للتنفيذ
-          </div>
+          <div class="ve-card-desc" id="vcd-client">أريد بناء تطبيق موبايل أو لدي مشروع للتنفيذ</div>
           <div class="ve-feats" id="vcf-client">
-            <div class="ve-feat">
-              <div class="ve-feat-dot"></div><span>الأعمال والمشاريع المنجزة</span>
-            </div>
-            <div class="ve-feat">
-              <div class="ve-feat-dot"></div><span>الخدمات والأسعار</span>
-            </div>
-            <div class="ve-feat">
-              <div class="ve-feat-dot"></div><span>طريقة العمل معاً</span>
-            </div>
+            <div class="ve-feat"><div class="ve-feat-dot"></div><span>الأعمال والمشاريع المنجزة</span></div>
+            <div class="ve-feat"><div class="ve-feat-dot"></div><span>الخدمات والأسعار</span></div>
+            <div class="ve-feat"><div class="ve-feat-dot"></div><span>طريقة العمل معاً</span></div>
           </div>
-          <button class="ve-cta" id="vccta-client">
-            <i class="fas fa-rocket"></i>
-            <span>ابدأ مشروعك معي</span>
-            <i class="fas fa-arrow-left ve-cta-arr"></i>
-          </button>
+          <button class="ve-cta" id="vccta-client"><i class="fas fa-rocket"></i><span>ابدأ مشروعك معي</span><i class="fas fa-arrow-left ve-cta-arr"></i></button>
         </div>
       </div>
 
@@ -3025,9 +819,6 @@
     </div>
   </div>
 
-  <!-- STEP 2 (language selection) removed — language chosen on step 1 -->
-
-  <!-- ══════════════ NAVBAR ══════════════ -->
   <nav id="navbar">
     <div class="nav-logo">MKT</div>
     <div class="nav-links" id="nav-links">
@@ -3054,7 +845,6 @@
     </div>
   </nav>
 
-  <!-- Mobile drawer -->
   <div class="mob-nav" id="mob-nav">
     <a href="#hero" class="nav-a" data-k="nav.home" onclick="closeMob()"></a>
     <a href="#services" class="nav-a" data-k="nav.services" onclick="closeMob()"></a>
@@ -3064,7 +854,6 @@
     <a href="#contact" class="nav-a" data-k="nav.contact" onclick="closeMob()"></a>
   </div>
 
-  <!-- ══════════════ HERO ══════════════ -->
   <section id="hero">
     <div class="hero-ambient"></div>
     <div class="hero-grid"></div>
@@ -3073,8 +862,7 @@
         <div class="eyebrow" data-k="hero.eyebrow"></div>
         <h1 class="hero-name">
           MAHMOUD<br>
-          <span class="sk">KHALED</span><br>
-          <span class="ac">TARAMSI</span>
+          <span class="sk">KHALED</span>
         </h1>
         <div class="hero-tagline" id="hero-tagline"></div>
         <p class="hero-bio" id="hero-bio"></p>
@@ -3108,17 +896,17 @@
           <div class="ftag-dot" style="background:var(--amber)"></div><span data-k="hero.ft2"></span>
         </div>
         <div class="ftag ft3">
-          <div class="ftag-dot" style="background:var(--violet)"></div>+20 Apps
+          <div class="ftag-dot" style="background:var(--violet)"></div>+15 Apps
         </div>
       </div>
     </div>
     <div class="hero-strip">
       <div class="strip-cell">
-        <div class="strip-n">5<sup>+</sup></div>
+        <div class="strip-n">3<sup>+</sup></div>
         <div class="strip-l" data-k="stat.years"></div>
       </div>
       <div class="strip-cell">
-        <div class="strip-n">20<sup>+</sup></div>
+        <div class="strip-n">15<sup>+</sup></div>
         <div class="strip-l" data-k="stat.apps"></div>
       </div>
       <div class="strip-cell">
@@ -3132,7 +920,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ SERVICES ══════════════ -->
   <section id="services">
     <div class="inn">
       <div class="sec-tag rv" data-k="svc.tag"></div>
@@ -3141,7 +928,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ HOW I WORK ══════════════ -->
   <section id="how">
     <div class="inn">
       <div class="sec-tag rv" data-k="how.tag"></div>
@@ -3150,7 +936,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ CASE STUDIES ══════════════ -->
   <section id="projects">
     <div class="inn">
       <div class="sec-tag rv" data-k="proj.tag"></div>
@@ -3165,7 +950,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ SKILLS ══════════════ -->
   <section id="skills">
     <div class="ticker-w" aria-hidden="true">
       <div class="ticker">
@@ -3176,15 +960,13 @@
         <span class="ti">BLOC</span><span class="ti d">◆</span>
         <span class="ti">CLEAN ARCH</span><span class="ti d">◆</span>
         <span class="ti">FIGMA</span><span class="ti d">◆</span>
-        <span class="ti">MYSQL</span><span class="ti d">◆</span>
+        <span class="ti">PYTHON</span><span class="ti d">◆</span>
+        <span class="ti">JAVA</span><span class="ti d">◆</span>
         <span class="ti">FLUTTER</span><span class="ti d">◆</span>
         <span class="ti">DART</span><span class="ti d">◆</span>
         <span class="ti">FIREBASE</span><span class="ti d">◆</span>
         <span class="ti">GETX</span><span class="ti d">◆</span>
         <span class="ti">BLOC</span><span class="ti d">◆</span>
-        <span class="ti">CLEAN ARCH</span><span class="ti d">◆</span>
-        <span class="ti">FIGMA</span><span class="ti d">◆</span>
-        <span class="ti">MYSQL</span><span class="ti d">◆</span>
       </div>
     </div>
     <div class="inn" style="padding-top:0">
@@ -3194,7 +976,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ TESTIMONIALS ══════════════ -->
   <section id="testimonials">
     <div class="inn">
       <div class="sec-tag rv" data-k="test.tag"></div>
@@ -3203,7 +984,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ TEACHING ══════════════ -->
   <section id="teaching">
     <div class="inn">
       <div class="sec-tag rv" data-k="teach.tag"></div>
@@ -3212,7 +992,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ TIMELINE ══════════════ -->
   <section id="timeline">
     <div class="inn">
       <div class="sec-tag rv" data-k="tl.tag"></div>
@@ -3224,7 +1003,6 @@
     </div>
   </section>
 
-  <!-- ══════════════ CONTACT ══════════════ -->
   <section id="contact">
     <div class="c-inner">
       <div class="c-big rv" id="c-big"></div>
@@ -3240,35 +1018,35 @@
             <div class="wa-arr">→</div>
           </a>
           <div class="c-links">
-            <a href="/cdn-cgi/l/email-protection#9bf6faf3f6f4eefff0f3faf7fefffaf7effae9faf6e8f2dbfcf6faf2f7b5f8f4f6" class="c-link">
+            <a href="mailto:your.email@example.com" class="c-link">
               <div class="cl-ico"><i class="fas fa-envelope"></i></div>
               <div>
                 <div class="cl-label" data-k="contact.email.label"></div>
-                <div class="cl-val"><span class="__cf_email__" data-cfemail="0d606c656062786966656c6168696c61796c7f6c607e644d6a606c6461236e6260">[email&#160;protected]</span></div>
+                <div class="cl-val">your.email@example.com</div>
               </div>
               <div class="cl-arr">←</div>
             </a>
-            <a href="https://github.com/mahmoud-altaramsi" target="_blank" class="c-link">
+            <a href="https://github.com/yourusername" target="_blank" class="c-link">
               <div class="cl-ico"><i class="fab fa-github"></i></div>
               <div>
                 <div class="cl-label">GitHub</div>
-                <div class="cl-val">github.com/mahmoud-altaramsi</div>
+                <div class="cl-val">github.com/yourusername</div>
               </div>
               <div class="cl-arr">←</div>
             </a>
-            <a href="https://linkedin.com/in/mahmoud-altaramsi" target="_blank" class="c-link">
+            <a href="https://linkedin.com/in/yourusername" target="_blank" class="c-link">
               <div class="cl-ico"><i class="fab fa-linkedin"></i></div>
               <div>
                 <div class="cl-label">LinkedIn</div>
-                <div class="cl-val">linkedin.com/in/mahmoud-altaramsi</div>
+                <div class="cl-val">linkedin.com/in/yourusername</div>
               </div>
               <div class="cl-arr">←</div>
             </a>
-            <a href="https://www.facebook.com/ALTaramsi2024" target="_blank" class="c-link">
+            <a href="https://facebook.com/yourusername" target="_blank" class="c-link">
               <div class="cl-ico"><i class="fab fa-facebook"></i></div>
               <div>
                 <div class="cl-label">Facebook</div>
-                <div class="cl-val">ALTaramsi2024</div>
+                <div class="cl-val">yourusername</div>
               </div>
               <div class="cl-arr">←</div>
             </a>
@@ -3318,7 +1096,6 @@
     <i class="fas fa-chevron-up"></i>
   </button>
 
-  <!-- PROJECT MODAL -->
   <div class="modal" id="modal" onclick="handleModalClick(event)">
     <div class="modal-box" onclick="event.stopPropagation()">
       <button class="modal-close" onclick="closeModal()"><i class="fas fa-times"></i></button>
@@ -3350,121 +1127,120 @@
         "nav.skills": "المهارات", "nav.testimonials": "آراء", "nav.contact": "تواصل", "nav.cv": "السيرة الذاتية",
         "mode.recruiter": "مجنّد", "mode.client": "عميل",
         "hero.eyebrow": "متاح للعمل الآن",
-        "hero.taglineR": "مطوّر Flutter · مهندس برمجيات · <strong>مدرّس تقني</strong>",
-        "hero.taglineC": "أبني تطبيقك من الفكرة حتى المتجر — <strong>بدون ضجيج</strong>",
-        "hero.bioR": "مطوّر يسلّم منتجات حقيقية، ومدرّس يصنع مسارات مهنية. خمس سنوات في مصر وخارجها. كل تطبيق شُحن، كل سطر كود — بإتقان.",
-        "hero.bioC": "فكرتك تستحق تطبيقاً يُحبّه مستخدموه. أبني بـ Flutter تطبيقات سريعة وجميلة — من تصميم الـ UX حتى النشر على App Store و Google Play.",
+        "hero.taglineR": "مطوّر Flutter · مهندس برمجيات · <strong>مدرّس برمجة</strong>",
+        "hero.taglineC": "أبني تطبيقك من الفكرة حتى المتجر — <strong>بأعلى جودة</strong>",
+        "hero.bioR": "أنا محمود خالد — مطوّر Flutter شغوف ومدرّس برمجة. أركز على بناء تطبيقات موبايل عملية ومصمَّمة بعناية، وأعلّم الأطفال والمبتدئين بطريقة عملية وممتعة بحيث يفهموا الفكرة ويتقنوها.",
+        "hero.bioC": "شغلي يركّز على بناء تطبيقات مستقرة وسهلة الصيانة باستخدام معمارية واضحة (GetX / Provider)، وتكامل كامل مع Firebase. نفّذت أكثر من 15 مشروع من التصميم لحد النشر.",
         "hero.hire": "وظّفني الآن", "hero.hireC": "ابدأ مشروعك",
         "hero.project": "شوف الأعمال", "hero.cv": "تحميل السيرة الذاتية",
-        "hero.badge": "<b>5+</b>سنوات خبرة", "hero.ft2": "+200 طالب",
-        "stat.years": "سنوات بناء", "stat.apps": "تطبيق مكتمل",
+        "hero.badge": "<b>3+</b>سنوات خبرة", "hero.ft2": "+200 طالب",
+        "stat.years": "سنوات خبرة", "stat.apps": "تطبيقات مطوّرة",
         "stat.students": "طالب درّسته", "stat.passion": "شغف لا يهدأ",
         "svc.tag": "الخدمات", "svc.titleA": "ماذا أقدّم", "svc.titleB": "لك.",
         "how.tag": "طريقة العمل", "how.titleA": "كيف", "how.titleB": "نبني معاً.",
-        "proj.tag": "أعمال مختارة", "proj.titleA": "Case Studies", "proj.titleB": "حقيقية.",
-        "proj.all": "الكل", "proj.edu": "تعليم",
+        "proj.tag": "أعمال مختارة", "proj.titleA": "المشاريع", "proj.titleB": "المنفذة.",
+        "proj.all": "الكل", "proj.edu": "صحة وتعليم",
         "sk.tag": "المهارات والتقنيات", "sk.titleA": "مبنيّ على", "sk.titleB": "العمق.",
         "test.tag": "آراء العملاء والطلاب", "test.titleA": "ماذا", "test.titleB": "قالوا.",
-        "teach.tag": "التدريس والإرشاد", "teach.titleA": "أبني", "teach.titleB": "البنّائين.",
-        "tl.tag": "المسيرة المهنية", "tl.titleA": "المسار", "tl.titleB": "الذي يهمّ.",
+        "teach.tag": "التدريس في الأكاديمية", "teach.titleA": "أبني", "teach.titleB": "المبرمجين.",
+        "tl.tag": "المسيرة المهنية", "tl.titleA": "المسار", "tl.titleB": "المهني.",
         "contact.big.r": "لنبني<br><span class='out'>معاً</span><br><span class='ac'>شيئاً.</span>",
         "contact.big.c": "تطبيقك.<br><span class='out'>كودي.</span><br><span class='ac'>لنبدأ.</span>",
-        "contact.sub.r": "سواء أردت <strong>التوظيف</strong> أو <strong>التعاون</strong> أو مجرد التحدث عن التكنولوجيا — أردّ خلال 24 ساعة.",
-        "contact.sub.c": "مشروعك يستحق مطوّراً يهتم. أرسل رسالة ونتكلّم عن الفكرة. <strong>بدون كلام فارغ.</strong>",
-        "contact.wa.title": "تكلّمني على واتساب", "contact.wa.sub": "متاح من السبت للخميس · رد خلال ساعة",
+        "contact.sub.r": "سواء أردت <strong>التوظيف</strong> أو <strong>التعاون</strong> أو مناقشة أفكار تقنية — يسعدني تواصلك.",
+        "contact.sub.c": "مشروعك يستحق مطوّراً يهتم بالتفاصيل. أرسل رسالة ونتكلّم عن الفكرة والتنفيذ.",
+        "contact.wa.title": "تكلّمني على واتساب", "contact.wa.sub": "متاح للرد السريع على استفساراتك",
         "contact.email.label": "البريد الإلكتروني",
-        "cv.title": "السيرة الذاتية جاهزة", "cv.sub": "PDF محدَّث ومنسَّق باحترافية", "cv.btn": "تحميل الآن",
+        "cv.title": "السيرة الذاتية جاهزة", "cv.sub": "بصيغة PDF محدَّثة ومنسَّقة", "cv.btn": "تحميل الآن",
         "form.name": "اسمك الكريم", "form.email": "بريدك الإلكتروني", "form.subject": "موضوع الرسالة",
         "form.type.default": "نوع التواصل", "form.type.hire": "وظّفني", "form.type.project": "مشروع جديد",
-        "form.type.collab": "تعاون", "form.type.teach": "تدريس خاص",
+        "form.type.collab": "تعاون", "form.type.teach": "تدريس برمجة",
         "form.msg": "رسالتك...", "form.send": "إرسال الرسالة",
-        "form.success": "✓ شكراً! تم استلام رسالتك. سأردّ خلال 24 ساعة.",
-        "footer": "© 2025 محمود خالد الترمسي — جميع الحقوق محفوظة",
-        "modal.prob": "المشكلة", "modal.sol": "الحل", "modal.res": "النتائج",
+        "form.success": "✓ شكراً! تم استلام رسالتك بنجاح.",
+        "footer": "© 2025 محمود خالد — جميع الحقوق محفوظة",
+        "modal.prob": "فكرة التطبيق والمشكلة", "modal.sol": "الحل البرمجي", "modal.res": "النتائج والإمكانيات",
         "modal.start": "تاريخ البداية", "modal.end": "تاريخ الانتهاء",
-        "modal.price": "التكلفة", "modal.rating": "التقييم"
+        "modal.price": "التكلفة المرجعية", "modal.rating": "التقييم"
       },
       en: {
         "nav.home": "Home", "nav.services": "Services", "nav.projects": "Work",
         "nav.skills": "Skills", "nav.testimonials": "Reviews", "nav.contact": "Contact", "nav.cv": "Download CV",
         "mode.recruiter": "Recruiter", "mode.client": "Client",
         "hero.eyebrow": "Available for work",
-        "hero.taglineR": "Flutter Developer · Software Engineer · <strong>Tech Instructor</strong>",
-        "hero.taglineC": "I turn your idea into a polished app — <strong>on time, on budget</strong>",
-        "hero.bioR": "A developer who ships real products and an instructor who builds real careers. 5+ years across Egypt and the MENA region. Every app launched, every line written — with intent.",
-        "hero.bioC": "Your idea deserves an app users love from day one. I build Flutter apps that are fast, beautiful, and scalable — from UX to App Store launch.",
+        "hero.taglineR": "Flutter Developer · <strong>Programming Teacher</strong>",
+        "hero.taglineC": "Building stable, maintainable apps from idea to store.",
+        "hero.bioR": "I am Mahmoud Khaled — a Flutter developer and programming teacher. I build practical, well-designed mobile apps and teach kids and beginners in a hands-on way.",
+        "hero.bioC": "I focus on building stable, maintainable apps using clear architectures (GetX / Provider) and Firebase integration. I've delivered 15+ projects from design to publish.",
         "hero.hire": "Hire Me", "hero.hireC": "Start Project",
         "hero.project": "View Work", "hero.cv": "Download CV",
-        "hero.badge": "<b>5+</b>yrs experience", "hero.ft2": "+200 students",
+        "hero.badge": "<b>3+</b>yrs experience", "hero.ft2": "+200 students",
         "stat.years": "Years Building", "stat.apps": "Apps Shipped",
         "stat.students": "Students Taught", "stat.passion": "Lines of Passion",
         "svc.tag": "Services", "svc.titleA": "What I", "svc.titleB": "Offer.",
         "how.tag": "Process", "how.titleA": "How We", "how.titleB": "Build.",
         "proj.tag": "Selected Work", "proj.titleA": "Case Studies", "proj.titleB": "That Shipped.",
-        "proj.all": "All", "proj.edu": "Education",
+        "proj.all": "All", "proj.edu": "Health & Ed",
         "sk.tag": "Skills & Stack", "sk.titleA": "Built on", "sk.titleB": "Depth.",
         "test.tag": "Client & Student Reviews", "test.titleA": "What", "test.titleB": "They Said.",
         "teach.tag": "Teaching & Mentorship", "teach.titleA": "I Build", "teach.titleB": "Builders.",
         "tl.tag": "Career Journey", "tl.titleA": "The Path", "tl.titleB": "That Matters.",
         "contact.big.r": "Let's<br><span class='out'>Build</span><br><span class='ac'>Together.</span>",
         "contact.big.c": "Your App.<br><span class='out'>My Code.</span><br><span class='ac'>Let's Go.</span>",
-        "contact.sub.r": "Whether you want to <strong>hire</strong>, <strong>collaborate</strong>, or just talk tech — inbox always open. 24-hour response.",
-        "contact.sub.c": "Ready to build something your users will love? Send a message and let's scope your project. <strong>No fluff, just results.</strong>",
-        "contact.wa.title": "Chat on WhatsApp", "contact.wa.sub": "Available Sat–Thu · Reply within 1 hour",
+        "contact.sub.r": "Whether you want to <strong>hire</strong>, <strong>collaborate</strong>, or just talk tech.",
+        "contact.sub.c": "Ready to build something your users will love? Send a message.",
+        "contact.wa.title": "Chat on WhatsApp", "contact.wa.sub": "Quick replies to your inquiries",
         "contact.email.label": "Email",
-        "cv.title": "CV Ready to Download", "cv.sub": "Updated PDF, professionally formatted", "cv.btn": "Download Now",
+        "cv.title": "CV Ready to Download", "cv.sub": "Updated PDF format", "cv.btn": "Download Now",
         "form.name": "Your name", "form.email": "Your email", "form.subject": "Subject",
         "form.type.default": "Type of enquiry", "form.type.hire": "Hire me", "form.type.project": "New project",
-        "form.type.collab": "Collaboration", "form.type.teach": "Private tutoring",
+        "form.type.collab": "Collaboration", "form.type.teach": "Programming Tutoring",
         "form.msg": "Your message...", "form.send": "Send Message",
-        "form.success": "✓ Thank you! Message received. I'll reply within 24 hours.",
-        "footer": "© 2025 Mahmoud Khaled Al-Taramsi — All rights reserved",
-        "modal.prob": "The Problem", "modal.sol": "The Solution", "modal.res": "Results",
+        "form.success": "✓ Thank you! Message received.",
+        "footer": "© 2025 Mahmoud Khaled — All rights reserved",
+        "modal.prob": "Concept & Problem", "modal.sol": "Solution", "modal.res": "Results & Features",
         "modal.start": "Start Date", "modal.end": "End Date",
-        "modal.price": "Budget", "modal.rating": "Rating"
+        "modal.price": "Ref Budget", "modal.rating": "Rating"
       },
       zh: {
         "nav.home": "首页", "nav.services": "服务", "nav.projects": "作品",
         "nav.skills": "技能", "nav.testimonials": "评价", "nav.contact": "联系", "nav.cv": "下载简历",
         "mode.recruiter": "招聘方", "mode.client": "客户",
         "hero.eyebrow": "接受工作邀约",
-        "hero.taglineR": "Flutter 开发者 · 软件工程师 · <strong>技术讲师</strong>",
-        "hero.taglineC": "将您的创意打造成用户喜爱的应用 — <strong>准时、高效</strong>",
-        "hero.bioR": "交付真实产品的开发者，塑造真实职业的讲师。5年+ 经验，遍及埃及和中东北非。每一个应用，每一行代码——精心打造。",
-        "hero.bioC": "您的创意值得用户第一次使用就爱上的应用。我用 Flutter 构建快速、美观、可扩展的应用——从 UX 设计到 App Store 上线。",
+        "hero.taglineR": "Flutter 开发者 · <strong>编程讲师</strong>",
+        "hero.taglineC": "将您的创意打造成稳定且可维护的应用。",
+        "hero.bioR": "我是 Mahmoud Khaled — 一名 Flutter 开发者兼编程教师。我构建实用、设计精良的移动应用，并以实践的方式教授儿童和初学者。",
+        "hero.bioC": "我专注于使用清晰的架构 (GetX / Provider) 和 Firebase 构建稳定的应用。我已经交付了15个以上的项目。",
         "hero.hire": "立即雇用", "hero.hireC": "启动项目",
         "hero.project": "查看作品", "hero.cv": "下载简历",
-        "hero.badge": "<b>5+</b>年经验", "hero.ft2": "+200学员",
+        "hero.badge": "<b>3+</b>年经验", "hero.ft2": "+200学员",
         "stat.years": "构建年限", "stat.apps": "已发布应用",
         "stat.students": "培训学员", "stat.passion": "热情无限",
         "svc.tag": "服务", "svc.titleA": "我能", "svc.titleB": "提供什么。",
         "how.tag": "工作流程", "how.titleA": "如何", "how.titleB": "共同构建。",
         "proj.tag": "精选作品", "proj.titleA": "案例研究", "proj.titleB": "已交付。",
-        "proj.all": "全部", "proj.edu": "教育",
+        "proj.all": "全部", "proj.edu": "教育与健康",
         "sk.tag": "技能栈", "sk.titleA": "深度", "sk.titleB": "构建。",
         "test.tag": "客户与学员评价", "test.titleA": "他们", "test.titleB": "怎么说。",
         "teach.tag": "教学与辅导", "teach.titleA": "培育", "teach.titleB": "建造者。",
         "tl.tag": "职业历程", "tl.titleA": "重要的", "tl.titleB": "道路。",
         "contact.big.r": "一起<br><span class='out'>共建</span><br><span class='ac'>未来。</span>",
         "contact.big.c": "您的应用。<br><span class='out'>我的代码。</span><br><span class='ac'>出发！</span>",
-        "contact.sub.r": "无论您想<strong>招聘</strong>、<strong>合作</strong>还是谈技术——24小时内回复。",
-        "contact.sub.c": "准备好构建用户喜爱的产品了吗？发送消息，一起规划您的项目。<strong>务实高效，只看结果。</strong>",
-        "contact.wa.title": "在 WhatsApp 上联系", "contact.wa.sub": "周六至周四均可联系 · 1小时内回复",
+        "contact.sub.r": "无论您想招聘、合作还是谈技术。",
+        "contact.sub.c": "准备好构建产品了吗？发送消息。",
+        "contact.wa.title": "在 WhatsApp 上联系", "contact.wa.sub": "快速回复您的查询",
         "contact.email.label": "电子邮件",
-        "cv.title": "简历随时可下载", "cv.sub": "更新版 PDF，专业排版", "cv.btn": "立即下载",
+        "cv.title": "简历随时可下载", "cv.sub": "更新版 PDF", "cv.btn": "立即下载",
         "form.name": "您的姓名", "form.email": "您的邮箱", "form.subject": "主题",
         "form.type.default": "咨询类型", "form.type.hire": "招聘我", "form.type.project": "新项目",
-        "form.type.collab": "合作", "form.type.teach": "私人辅导",
+        "form.type.collab": "合作", "form.type.teach": "编程辅导",
         "form.msg": "您的留言...", "form.send": "发送消息",
-        "form.success": "✓ 谢谢！消息已收到，我将在24小时内回复。",
-        "footer": "© 2025 Mahmoud Khaled Al-Taramsi — 版权所有",
+        "form.success": "✓ 谢谢！消息已收到。",
+        "footer": "© 2025 Mahmoud Khaled — 版权所有",
         "modal.prob": "问题", "modal.sol": "解决方案", "modal.res": "成果",
         "modal.start": "开始日期", "modal.end": "结束日期",
         "modal.price": "预算", "modal.rating": "评分"
       }
     };
 
-    /* ─── VISITOR ENTRY CONTENT per language ─── */
     const VE_CONTENT = {
       ar: {
         question: 'مرحباً 👋 — <strong>من أنت؟</strong>',
@@ -3475,15 +1251,15 @@
         recruiter: {
           title: 'RECRUITER',
           subtitle: 'مسؤول توظيف / HR',
-          desc: 'أبحث عن مطوّر Flutter لفريقي أو شركتي',
-          feats: ['السيرة الذاتية والخبرات', 'مستوى المهارات التقنية', 'المسار المهني'],
-          cta: 'عرض نسخة المجنّدين'
+          desc: 'أبحث عن مطوّر Flutter ومعلم برمجة لفريقي أو أكاديميتي',
+          feats: ['السيرة الذاتية والخبرات', 'مستوى المهارات التقنية والتدريسية', 'المسار المهني'],
+          cta: 'عرض نسخة التوظيف'
         },
         client: {
           title: 'CLIENT',
           subtitle: 'عميل / صاحب مشروع',
-          desc: 'أريد بناء تطبيق موبايل أو لدي مشروع للتنفيذ',
-          feats: ['الأعمال والمشاريع المنجزة', 'الخدمات وطريقة العمل', 'ابدأ مشروعك الآن'],
+          desc: 'أريد بناء تطبيق موبايل متكامل وجاهز للنشر',
+          feats: ['الأعمال والمشاريع المنجزة', 'الخدمات وتطبيقات Flutter', 'طريقة العمل معاً'],
           cta: 'ابدأ مشروعك معي'
         }
       },
@@ -3496,15 +1272,15 @@
         recruiter: {
           title: 'RECRUITER',
           subtitle: 'HR / Hiring Manager',
-          desc: "I'm looking for a Flutter developer for my team or company",
-          feats: ['Resume & experience overview', 'Technical skills depth', 'Career timeline'],
+          desc: "Looking for a Flutter developer & Programming teacher",
+          feats: ['Resume & experience overview', 'Technical & teaching skills', 'Career timeline'],
           cta: 'View Recruiter Mode'
         },
         client: {
           title: 'CLIENT',
           subtitle: 'Client / Project Owner',
-          desc: "I want to build a mobile app or have a project to execute",
-          feats: ['Portfolio & case studies', 'Services & pricing', 'How we work together'],
+          desc: "I want to build a mobile app from scratch",
+          feats: ['Portfolio & case studies', 'Flutter Services', 'How we work together'],
           cta: 'Start Your Project'
         }
       },
@@ -3517,45 +1293,39 @@
         recruiter: {
           title: 'RECRUITER',
           subtitle: 'HR / 招聘经理',
-          desc: '我正在为我的团队或公司寻找 Flutter 开发者',
-          feats: ['简历与经验', '技术技能深度', '职业发展轨迹'],
+          desc: '我正在为我的团队寻找 Flutter 开发者兼编程讲师',
+          feats: ['简历与经验', '技术与教学技能', '职业发展轨迹'],
           cta: '查看招聘版本'
         },
         client: {
           title: 'CLIENT',
           subtitle: '客户 / 项目所有者',
-          desc: '我想构建移动应用或有项目需要执行',
-          feats: ['作品集与案例研究', '服务与合作方式', '立即启动项目'],
+          desc: '我想构建一个完整的移动应用程序',
+          feats: ['作品集与案例研究', 'Flutter 服务', '合作方式'],
           cta: '启动我的项目'
         }
       }
     };
 
-    /* ─── STATE ─── */
     let lang = 'ar', mode = 'recruiter';
     let selectedVisitor = null;
-    let entryLang = 'ar'; // language chosen on visitor entry page
+    let entryLang = 'ar';
 
-    /* ─── VISITOR ENTRY LANGUAGE SWITCHER ─── */
     function switchEntryLang(l) {
       entryLang = l;
       updateVEContent(l);
-      // update dir for RTL/LTR on entry page
       document.documentElement.dir = l === 'ar' ? 'rtl' : 'ltr';
       document.documentElement.dataset.lang = l;
-      // update active button
       document.querySelectorAll('.ve-lang-btn').forEach((b, i) => {
         b.classList.toggle('on', ['ar', 'en', 'zh'][i] === l);
       });
     }
 
-    /* ─── VISITOR SELECTION LOGIC ─── */
     function updateVEContent(l) {
       const c = VE_CONTENT[l] || VE_CONTENT.ar;
       document.getElementById('ve-question').innerHTML = c.question;
       document.getElementById('ve-hint').textContent = c.hint;
 
-      // Recruiter card
       document.getElementById('vct-recruiter').textContent = c.recruiter.title;
       document.getElementById('vcs-recruiter').textContent = c.recruiter.subtitle;
       document.getElementById('vcd-recruiter').textContent = c.recruiter.desc;
@@ -3564,7 +1334,6 @@
       document.getElementById('vccta-recruiter').innerHTML =
         `<i class="fas fa-eye"></i><span>${c.recruiter.cta}</span><i class="fas fa-arrow-left ve-cta-arr"></i>`;
 
-      // Client card
       document.getElementById('vct-client').textContent = c.client.title;
       document.getElementById('vcs-client').textContent = c.client.subtitle;
       document.getElementById('vcd-client').textContent = c.client.desc;
@@ -3574,7 +1343,6 @@
         `<i class="fas fa-rocket"></i><span>${c.client.cta}</span><i class="fas fa-arrow-left ve-cta-arr"></i>`;
     }
 
-    // Initialise with Arabic (default)
     updateVEContent('ar');
     document.documentElement.dir = 'rtl';
     document.documentElement.dataset.lang = 'ar';
@@ -3583,38 +1351,22 @@
       selectedVisitor = type;
       const card = document.getElementById('vc-' + type);
       card.classList.add('selected');
-      // Boot directly with the language already chosen on entry page
-      setTimeout(() => {
-        boot(entryLang, type);
-      }, 380);
-    }
-
-    function goBackToVisitor() {
-      // kept for safety but lang-entry no longer exists
-      const ve = document.getElementById('visitor-entry');
-      ve.classList.remove('gone');
-      document.querySelectorAll('.ve-card').forEach(c => c.classList.remove('selected'));
-      selectedVisitor = null;
+      setTimeout(() => { boot(entryLang, type); }, 380);
     }
 
     function boot(l, visitorType) {
       lang = l;
       mode = visitorType || selectedVisitor || 'recruiter';
-
       document.getElementById('visitor-entry').classList.add('gone');
       document.documentElement.lang = lang;
       document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
       document.documentElement.dataset.lang = lang;
       document.documentElement.dataset.mode = mode;
 
-      // Update mode buttons
       document.getElementById('mpb-r').classList.toggle('on', mode === 'recruiter');
       document.getElementById('mpb-c').classList.toggle('on', mode === 'client');
-      if (mode === 'client') {
-        document.querySelector('.nav-logo').style.color = 'var(--amber)';
-      }
+      if (mode === 'client') document.querySelector('.nav-logo').style.color = 'var(--amber)';
 
-      // Sync navbar lang buttons
       document.querySelectorAll('.lang-btn').forEach((b, i) => {
         b.classList.toggle('on', ['ar', 'en', 'zh'][i] === lang);
       });
@@ -3626,277 +1378,267 @@
       });
     }
 
-    /* ─── SERVICES DATA ─── */
     const SERVICES = {
       ar: [
-        { icon: "📱", title: "تطوير تطبيقات الموبايل", desc: "بناء تطبيقات Flutter كاملة لـ iOS وAndroid. من التصميم حتى النشر على المتجر. أداء عالٍ، كود نظيف، تجربة مستخدم استثنائية.", tags: ["Flutter", "Dart", "iOS", "Android", "Firebase"] },
-        { icon: "🚀", title: "MVP Development", desc: "تحويل فكرتك لمنتج حقيقي يمكن اختباره في السوق خلال 6-8 أسابيع. الأسرع للسوق، الأرخص للمخاطرة.", tags: ["MVP", "Rapid Dev", "Firebase", "Supabase"] },
-        { icon: "🎨", title: "تحسين UI/UX", desc: "إعادة تصميم تطبيق موجود ليكون أكثر جمالاً وسهولة. تدقيق UX شامل، Figma prototypes، وتطبيق كامل.", tags: ["Figma", "UI Design", "UX Audit", "Material 3"] },
-        { icon: "🔥", title: "تكامل Firebase", desc: "ربط تطبيقك بـ Firebase الكاملة: Auth، Firestore، Cloud Functions، FCM، Analytics، Crashlytics.", tags: ["Firebase", "Auth", "Firestore", "FCM", "Analytics"] }
+        { icon: "📱", title: "تطوير تطبيقات الموبايل", desc: "بناء تطبيقات Flutter كاملة لـ iOS وAndroid. أداء عالٍ، كود نظيف، وتجربة مستخدم استثنائية.", tags: ["Flutter", "Dart", "iOS", "Android"] },
+        { icon: "🔥", title: "تكامل Firebase", desc: "ربط التطبيقات بقواعد بيانات حية، مصادقة مستخدمين، وإشعارات لضمان استقرار التطبيق وتحديثه.", tags: ["Firebase", "Auth", "Firestore"] },
+        { icon: "🎨", title: "تصميم واجهات UI/UX", desc: "تطبيق مبادئ التصميم الحديثة لإنشاء واجهات مريحة وسهلة الاستخدام تركز على راحة المستخدم.", tags: ["UI/UX", "Material 3", "Animations"] },
+        { icon: "🎓", title: "تدريس البرمجة", desc: "تعليم الأطفال والمبتدئين أساسيات البرمجة وتطوير الموبايل بطريقة عملية، ممتعة، وتفاعلية.", tags: ["Teaching", "Kids Academy", "Mentoring"] }
       ],
       en: [
-        { icon: "📱", title: "Mobile App Development", desc: "Full Flutter apps for iOS & Android. From design to App Store submission. High performance, clean code, exceptional UX.", tags: ["Flutter", "Dart", "iOS", "Android", "Firebase"] },
-        { icon: "🚀", title: "MVP Development", desc: "Turn your idea into a market-ready product in 6–8 weeks. Fastest to market, lowest risk — built to validate before you scale.", tags: ["MVP", "Rapid Dev", "Firebase", "Supabase"] },
-        { icon: "🎨", title: "UI/UX Enhancement", desc: "Redesign an existing app to be more beautiful and intuitive. Full UX audit, Figma prototypes, and complete implementation.", tags: ["Figma", "UI Design", "UX Audit", "Material 3"] },
-        { icon: "🔥", title: "Firebase Integration", desc: "Connect your app to full Firebase: Auth, Firestore, Cloud Functions, FCM, Analytics, Crashlytics — done right.", tags: ["Firebase", "Auth", "Firestore", "FCM", "Analytics"] }
+        { icon: "📱", title: "Mobile App Development", desc: "Full Flutter apps for iOS & Android. High performance, clean code, exceptional UX.", tags: ["Flutter", "Dart", "iOS", "Android"] },
+        { icon: "🔥", title: "Firebase Integration", desc: "Connecting apps to live databases, user authentication, and notifications for stability.", tags: ["Firebase", "Auth", "Firestore"] },
+        { icon: "🎨", title: "UI/UX Design", desc: "Applying modern design principles to create intuitive and user-friendly interfaces.", tags: ["UI/UX", "Material 3", "Animations"] },
+        { icon: "🎓", title: "Programming Tutoring", desc: "Teaching kids and beginners programming basics and mobile dev in a fun, hands-on way.", tags: ["Teaching", "Kids Academy", "Mentoring"] }
       ],
       zh: [
-        { icon: "📱", title: "移动应用开发", desc: "为 iOS 和 Android 构建完整的 Flutter 应用。从设计到 App Store 提交。高性能、简洁代码、卓越用户体验。", tags: ["Flutter", "Dart", "iOS", "Android", "Firebase"] },
-        { icon: "🚀", title: "MVP 开发", desc: "在 6-8 周内将您的创意转化为可上市产品。最快上市，最低风险——为验证而构建。", tags: ["MVP", "快速开发", "Firebase", "Supabase"] },
-        { icon: "🎨", title: "UI/UX 优化", desc: "重新设计现有应用，使其更美观、更直观。完整的 UX 审计、Figma 原型和完全实现。", tags: ["Figma", "UI设计", "UX审计", "Material 3"] },
-        { icon: "🔥", title: "Firebase 集成", desc: "将您的应用连接到完整的 Firebase：Auth、Firestore、Cloud Functions、FCM、Analytics、Crashlytics。", tags: ["Firebase", "Auth", "Firestore", "FCM", "Analytics"] }
+        { icon: "📱", title: "移动应用开发", desc: "为 iOS 和 Android 构建完整的 Flutter 应用。高性能、简洁代码、卓越用户体验。", tags: ["Flutter", "Dart", "iOS", "Android"] },
+        { icon: "🔥", title: "Firebase 集成", desc: "将应用连接到实时数据库、用户认证和通知系统，确保应用的稳定性。", tags: ["Firebase", "Auth", "Firestore"] },
+        { icon: "🎨", title: "UI/UX 设计", desc: "应用现代设计原则创建直观、用户友好的界面。", tags: ["UI/UX", "Material 3", "Animations"] },
+        { icon: "🎓", title: "编程辅导", desc: "以有趣、实践的方式向儿童和初学者教授编程基础和移动开发。", tags: ["教学", "儿童学院", "辅导"] }
       ]
     };
 
     const HOW = {
       ar: [
-        { num: "01", icon: "🔍", title: "الاكتشاف", desc: "نتكلم عن مشروعك، أهدافك، ومستخدميك. أفهم المشكلة قبل أن أكتب سطراً واحداً." },
-        { num: "02", icon: "🎨", title: "التصميم", desc: "Figma wireframes وprototypes. تراها قبل البناء وتعدّلها حتى تكون مثالية." },
-        { num: "03", icon: "⚙️", title: "التطوير", desc: "بناء بـ Flutter وبنية نظيفة. تحديثات أسبوعية وكود يمكن الفهم والتطوير لاحقاً." },
-        { num: "04", icon: "🚀", title: "الإطلاق والدعم", desc: "نشر على App Store وGoogle Play. اختبار، تأكيد الجودة، ودعم بعد الإطلاق." }
+        { num: "01", icon: "🔍", title: "الاكتشاف", desc: "نتكلم عن فكرتك، متطلباتك. أفهم المشكلة والهدف قبل كتابة أي كود." },
+        { num: "02", icon: "🎨", title: "التخطيط والتصميم", desc: "تصميم واجهات المستخدم وتجربة المستخدم لضمان سهولة الاستخدام." },
+        { num: "03", icon: "⚙️", title: "التطوير", desc: "بناء التطبيق باستخدام Flutter بمعمارية نظيفة وتكامل مع قواعد البيانات." },
+        { num: "04", icon: "🚀", title: "الإطلاق والاختبار", desc: "اختبار التطبيق بدقة للتأكد من جودته ثم نشره ومتابعة الأداء." }
       ],
       en: [
-        { num: "01", icon: "🔍", title: "Discovery", desc: "We talk about your project, goals, and users. I understand the problem before writing a single line." },
-        { num: "02", icon: "🎨", title: "Design", desc: "Figma wireframes and prototypes. You see it before we build it — and refine until it's perfect." },
-        { num: "03", icon: "⚙️", title: "Development", desc: "Built with Flutter and clean architecture. Weekly updates and code you can understand and extend." },
-        { num: "04", icon: "🚀", title: "Launch & Support", desc: "App Store and Google Play deployment. Testing, QA, and post-launch support included." }
+        { num: "01", icon: "🔍", title: "Discovery", desc: "We discuss your idea and requirements. Understanding the goal before coding." },
+        { num: "02", icon: "🎨", title: "Planning & Design", desc: "Designing user interfaces and experiences to ensure usability." },
+        { num: "03", icon: "⚙️", title: "Development", desc: "Building the app with Flutter using clean architecture and database integration." },
+        { num: "04", icon: "🚀", title: "Testing & Launch", desc: "Rigorously testing the app for quality, then deploying and monitoring." }
       ],
       zh: [
-        { num: "01", icon: "🔍", title: "发现阶段", desc: "我们讨论您的项目、目标和用户。在写下第一行代码之前，我先理解问题。" },
-        { num: "02", icon: "🎨", title: "设计阶段", desc: "Figma 线框图和原型。您在构建之前就能看到它——并精炼直到完美。" },
-        { num: "03", icon: "⚙️", title: "开发阶段", desc: "使用 Flutter 和简洁架构构建。每周更新，代码清晰易懂且可扩展。" },
-        { num: "04", icon: "🚀", title: "上线与支持", desc: "App Store 和 Google Play 部署。包含测试、QA 和上线后支持。" }
+        { num: "01", icon: "🔍", title: "发现阶段", desc: "我们讨论您的想法和需求。在编码前理解目标。" },
+        { num: "02", icon: "🎨", title: "计划与设计", desc: "设计用户界面和体验，确保易用性。" },
+        { num: "03", icon: "⚙️", title: "开发", desc: "使用 Flutter 结合简洁架构和数据库集成构建应用。" },
+        { num: "04", icon: "🚀", title: "测试与发布", desc: "严格测试应用质量，然后部署和监控。" }
       ]
     };
 
     const PROJECTS = {
       ar: [
         {
-          id: 1, featured: true, tags: "flutter firebase getx", icon: "fas fa-baby-carriage", iconClr: "#00e5ff",
-          title: "تطبيق مربيتي", problem: "الأمهات يجدن صعوبة في إيجاد مقدّمي رعاية موثوقين بطريقة سريعة وآمنة.",
-          solution: "منصة Flutter تربط الأمهات بمربيات ومدرسات وممرضات عبر دردشة فورية وملفات شخصية مفصّلة.",
-          results: ["تحميل +500 مرة", "تقييم 4.8★", "95% رضا العملاء", "وقت التطابق: أقل من 10 دقائق"],
-          start: "أكتوبر 2023", end: "يناير 2024", price: "$295", rating: "4.8 / 5",
-          desc: "منصة متكاملة مع Firebase Auth + Firestore + دردشة Real-time + إشعارات FCM.",
-          pills: ["Flutter", "Firebase", "GetX", "Real-time Chat", "FCM"]
+          id: 1, featured: true, tags: "flutter firebase", icon: "fas fa-shopping-cart", iconClr: "#00e5ff",
+          title: "تطبيق التجارة الإلكترونية", problem: "الحاجة إلى تجربة تسوق إلكترونية سريعة وموثوقة مع إدارة آمنة لبيانات الدفع.",
+          solution: "تطبيق متكامل للتسوق الإلكتروني مع نظام دفع آمن وواجهة مستخدم عصرية. يتضمن ميزات السلة، المفضلة، وتتبع الطلبات.",
+          results: ["+10,000 مستخدم نشط", "زيادة 35% في المبيعات", "واجهة مستخدم عصرية"],
+          start: "يناير 2023", end: "يونيو 2023", price: "$5,000", rating: "4.9 / 5",
+          desc: "تطبيق كامل للتسوق مع دفع آمن وواجهة عصرية. حقق نجاحًا كبيرًا ويوفر تجربة تسوق سلسة مع بحث وتصفية متقدمة.",
+          pills: ["Flutter", "Firebase", "Stripe", "E-Commerce"]
         },
         {
-          id: 2, featured: false, tags: "flutter", icon: "fab fa-whatsapp", iconClr: "#25d366",
-          title: "تطبيق ملصقات WhatsApp", problem: "فنانة تريد توزيع فنّها بشكل تفاعلي على مستخدمي WhatsApp بلمسة واحدة.",
-          solution: "تطبيق Flutter مع تكامل Native Android يضيف حزم الملصقات مباشرة لـ WhatsApp.",
-          results: ["تكامل كامل مع WhatsApp", "تجربة مستخدم سلسة", "نشر ناجح على Google Play"],
-          start: "مايو 2023", end: "يوليو 2023", price: "$213", rating: "4.5 / 5",
-          desc: "flutter_whatsapp_stickers مع Android native code مخصص.",
-          pills: ["Flutter", "Native Android", "WhatsApp API", "Animations"]
+          id: 2, featured: false, tags: "flutter education", icon: "fas fa-graduation-cap", iconClr: "#25d366",
+          title: "منصة تعليمية تفاعلية", problem: "نقص التطبيقات التعليمية التي تدمج بين المتعة والتعلم للأطفال.",
+          solution: "تطبيق تعليمي للأطفال يحتوي على دروس تفاعلية، اختبارات ذكية، ونظام متابعة تقدم متقدم للمربين.",
+          results: ["+5,000 طفل", "تصميم جذاب للأطفال", "جائزة أفضل تطبيق تعليمي"],
+          start: "يوليو 2023", end: "ديسمبر 2023", price: "$4,200", rating: "4.8 / 5",
+          desc: "منصة تعليمية شاملة بأكثر من 200 درس تفاعلي، زادت من مشاركة الطلاب بنسبة 60% بفضل التصميم الجذاب.",
+          pills: ["Flutter", "SQLite", "Animations"]
         },
         {
-          id: 3, featured: false, tags: "flutter firebase", icon: "fas fa-heart", iconClr: "#f43f5e",
-          title: "تطبيق صلة الرحم", problem: "أفراد العائلة يتباعدون وتضعف التواصل بينهم مع ضغوط الحياة.",
-          solution: "تطبيق يرسل تذكيرات للتواصل مع الأقارب وينظّم الصدقات العائلية.",
-          results: ["متاح مجاناً للجميع", "تذكيرات ذكية", "+1000 مستخدم"],
-          start: "يناير 2024", end: "فبراير 2024", price: "مجاني", rating: "5.0 / 5",
-          desc: "Firebase Notifications + Firestore. بُني كصدقة جارية ومشروع شخصي.",
-          pills: ["Flutter", "Firebase", "Notifications"]
+          id: 3, featured: false, tags: "flutter health", icon: "fas fa-dumbbell", iconClr: "#f43f5e",
+          title: "تطبيق اللياقة البدنية", problem: "صعوبة إيجاد تطبيق مخصص يجمع بين تتبع التمارين والأنظمة الغذائية الدقيقة.",
+          solution: "متتبع للتمارين الرياضية والتغذية مع خطط تمارين مخصصة. يتضمن مؤقت، متتبع السعرات، ورسوم بيانية.",
+          results: ["+15,000 مستخدم", "تكامل مع الساعات الذكية", "تحليلات صحية شاملة"],
+          start: "يناير 2024", end: "أبريل 2024", price: "$4,800", rating: "4.9 / 5",
+          desc: "تطبيق متقدم لتتبع التمارين والتغذية، يحتوي على مكتبة ضخمة من التمارين بالفيديو ونظام ذكي للمتابعة.",
+          pills: ["Flutter", "Provider", "Charts"]
         },
         {
-          id: 4, featured: false, tags: "flutter firebase getx", icon: "fas fa-chart-pie", iconClr: "#10b981",
-          title: "إدارة المصروفات", problem: "الناس لا يعرفون أين يذهب مالهم — غياب تتبع دقيق للنفقات اليومية.",
-          solution: "تطبيق Flutter يتتبع النفقات والدخل مع تقارير شهرية ورسوم بيانية تفاعلية.",
-          results: ["تحليل شهري كامل", "تقارير PDF", "واجهة سهلة الاستخدام"],
-          start: "مايو 2024", end: "يوليو 2024", price: "مشروع تجاري", rating: "4.8 / 5",
-          desc: "GetX + Firestore + fl_chart لرسوم بيانية تفاعلية.",
-          pills: ["Flutter", "Firebase", "GetX", "Charts"]
+          id: 4, featured: false, tags: "flutter firebase", icon: "fas fa-wallet", iconClr: "#10b981",
+          title: "إدارة المصروفات", problem: "تشتت المستخدمين في تتبع مصاريفهم اليومية ودخلهم الشهري بشكل دقيق.",
+          solution: "تطبيق Flutter متكامل يساعد على تسجيل ومتابعة النفقات اليومية مع تقارير شهرية مفصلة.",
+          results: ["تحليل شهري كامل", "واجهة إدخال سريعة", "رسوم بيانية تفاعلية"],
+          start: "مايو 2024", end: "يوليو 2024", price: "$3,800", rating: "4.8 / 5",
+          desc: "تطبيق احترافي لتتبع النفقات الشخصية، مبني باستخدام GetX لإدارة الحالة، مع تركيز على سهولة الاستخدام.",
+          pills: ["Flutter", "Firebase", "GetX", "Finance"]
         },
         {
-          id: 5, featured: false, tags: "flutter education", icon: "fas fa-weight", iconClr: "#8b5cf6",
-          title: "حاسبة BMI", problem: "معظم حاسبات BMI مملة وبلا تجربة مستخدم واضحة.",
-          solution: "تطبيق صحي بواجهة تفاعلية ديناميكية تتغير ألوانها حسب نتيجة المؤشر.",
-          results: ["+1000 تقييم", "تصميم Material 3", "مستخدمو يومي نشط"],
-          start: "أغسطس 2024", end: "سبتمبر 2024", price: "مشروع شخصي", rating: "4.9 / 5",
-          desc: "Custom animations + dynamic color theming + accurate WHO calculations.",
-          pills: ["Flutter", "Dart", "Animations", "Health"]
+          id: 5, featured: false, tags: "flutter education health", icon: "fas fa-weight", iconClr: "#8b5cf6",
+          title: "حاسبة الوزن المثالي (BMI)", problem: "معظم تطبيقات الـ BMI تقدم واجهات مملة بدون نصائح صحية مخصصة.",
+          solution: "تطبيق تفاعلي يقوم بالحسابات المعقدة لمعادلات BMI ويعطي نتيجة فورية مع نصيحة واضحة وتغيير لوني ديناميكي.",
+          results: ["واجهة تفاعلية ذكية", "حسابات دقيقة", "تقييمات ممتازة"],
+          start: "أغسطس 2024", end: "سبتمبر 2024", price: "$1,200", rating: "4.9 / 5",
+          desc: "أداتك الصحية الأولى لمعرفة حالة جسمك بدقة بناءً على المقياس العالمي الذي يستخدمه الأطباء والمدربون.",
+          pills: ["Flutter", "Dart", "Health API"]
         }
       ],
       en: [
         {
-          id: 1, featured: true, tags: "flutter firebase getx", icon: "fas fa-baby-carriage", iconClr: "#00e5ff",
-          title: "Morabity App", problem: "Mothers struggle to find trusted care providers quickly and safely.",
-          solution: "A Flutter platform connecting mothers and care providers via real-time chat, detailed profiles, and verified listings.",
-          results: ["+500 downloads", "4.8★ rating", "95% client satisfaction", "Match time < 10 mins"],
-          start: "Oct 2023", end: "Jan 2024", price: "$295", rating: "4.8 / 5",
-          desc: "Firebase Auth + Firestore + Real-time Chat + FCM push notifications. GetX architecture from day one.",
-          pills: ["Flutter", "Firebase", "GetX", "Real-time Chat", "FCM"]
+          id: 1, featured: true, tags: "flutter firebase", icon: "fas fa-shopping-cart", iconClr: "#00e5ff",
+          title: "E-commerce App", problem: "Need for a fast, reliable shopping experience with secure payment handling.",
+          solution: "A complete shopping app with secure payment and modern interface. Includes cart, favorites, and tracking.",
+          results: ["10,000+ Active Users", "35% Sales Increase", "Modern UI"],
+          start: "Jan 2023", end: "Jun 2023", price: "$5,000", rating: "4.9 / 5",
+          desc: "Complete shopping app with secure payment. Achieved great success providing a seamless experience.",
+          pills: ["Flutter", "Firebase", "Stripe"]
         },
         {
-          id: 2, featured: false, tags: "flutter", icon: "fab fa-whatsapp", iconClr: "#25d366",
-          title: "WhatsApp Sticker App", problem: "An artist wanted to distribute her digital stickers interactively on WhatsApp with one tap.",
-          solution: "Flutter app with Native Android integration adding sticker packs directly to WhatsApp.",
-          results: ["Full WhatsApp integration", "Seamless UX", "Live on Google Play"],
-          start: "May 2023", end: "Jul 2023", price: "$213", rating: "4.5 / 5",
-          desc: "flutter_whatsapp_stickers + customized Android native code for seamless sticker pack addition.",
-          pills: ["Flutter", "Native Android", "WhatsApp API", "Animations"]
+          id: 2, featured: false, tags: "flutter education", icon: "fas fa-graduation-cap", iconClr: "#25d366",
+          title: "Interactive Learning", problem: "Lack of engaging educational apps for kids.",
+          solution: "Educational app for kids with interactive lessons, smart quizzes, and progress tracking.",
+          results: ["5,000+ Children", "Engaging Design", "Best Ed-App Award"],
+          start: "Jul 2023", end: "Dec 2023", price: "$4,200", rating: "4.8 / 5",
+          desc: "Comprehensive educational app with over 200 interactive lessons, increasing engagement by 60%.",
+          pills: ["Flutter", "SQLite", "Animations"]
         },
         {
-          id: 3, featured: false, tags: "flutter firebase", icon: "fas fa-heart", iconClr: "#f43f5e",
-          title: "Kinship (Sila) App", problem: "Family bonds weaken as life gets busy — people forget to stay connected.",
-          solution: "An app that sends smart reminders for family contact and organizes charity giving.",
-          results: ["Free for everyone", "Smart reminders", "1000+ users"],
-          start: "Jan 2024", end: "Feb 2024", price: "Free", rating: "5.0 / 5",
-          desc: "Firebase Notifications + Firestore. Built as personal charity project.",
-          pills: ["Flutter", "Firebase", "Notifications"]
+          id: 3, featured: false, tags: "flutter health", icon: "fas fa-dumbbell", iconClr: "#f43f5e",
+          title: "Fitness Tracking App", problem: "Difficulty finding a dedicated app combining workout and diet tracking accurately.",
+          solution: "Workout and nutrition tracker with personalized plans, timers, and progress charts.",
+          results: ["15,000+ Users", "Smartwatch Sync", "Full Analytics"],
+          start: "Jan 2024", end: "Apr 2024", price: "$4,800", rating: "4.9 / 5",
+          desc: "Advanced workout and nutrition app featuring a huge library of video exercises.",
+          pills: ["Flutter", "Provider", "Charts"]
         },
         {
-          id: 4, featured: false, tags: "flutter firebase getx", icon: "fas fa-chart-pie", iconClr: "#10b981",
-          title: "Expense Manager", problem: "People don't know where their money goes — no accurate daily expense tracking.",
-          solution: "Flutter app tracking income and expenses with monthly reports and interactive charts.",
-          results: ["Full monthly analytics", "PDF reports", "Clean easy UI"],
-          start: "May 2024", end: "Jul 2024", price: "Commercial", rating: "4.8 / 5",
-          desc: "GetX + Firestore + fl_chart for interactive charts and monthly summaries.",
-          pills: ["Flutter", "Firebase", "GetX", "Charts"]
+          id: 4, featured: false, tags: "flutter firebase", icon: "fas fa-wallet", iconClr: "#10b981",
+          title: "Expense Manager", problem: "Users struggle to track their daily expenses accurately.",
+          solution: "Flutter app helping users log and track daily expenses with detailed monthly reports.",
+          results: ["Full Analytics", "Fast Entry UI", "Interactive Charts"],
+          start: "May 2024", end: "Jul 2024", price: "$3,800", rating: "4.8 / 5",
+          desc: "Professional expense tracker built with GetX, focusing on ease of use and clean UI.",
+          pills: ["Flutter", "Firebase", "GetX"]
         },
         {
-          id: 5, featured: false, tags: "flutter education", icon: "fas fa-weight", iconClr: "#8b5cf6",
-          title: "BMI Calculator", problem: "Most BMI calculators are boring with no clear UX or visual feedback.",
-          solution: "A health app with a dynamic interactive UI that changes color based on the BMI result.",
-          results: ["1000+ ratings", "Material 3 design", "Daily active users"],
-          start: "Aug 2024", end: "Sep 2024", price: "Personal", rating: "4.9 / 5",
-          desc: "Custom animations + dynamic color theming + accurate WHO calculations.",
-          pills: ["Flutter", "Dart", "Animations", "Health"]
+          id: 5, featured: false, tags: "flutter education health", icon: "fas fa-weight", iconClr: "#8b5cf6",
+          title: "BMI Calculator", problem: "Most BMI apps offer boring interfaces with no tailored advice.",
+          solution: "Interactive app that calculates BMI instantly, providing advice and dynamic color changes.",
+          results: ["Smart Interactive UI", "Accurate Maths", "Excellent Ratings"],
+          start: "Aug 2024", end: "Sep 2024", price: "$1,200", rating: "4.9 / 5",
+          desc: "Your primary health tool to accurately determine your body status based on global standards.",
+          pills: ["Flutter", "Dart", "Health API"]
         }
       ],
       zh: [
         {
-          id: 1, featured: true, tags: "flutter firebase getx", icon: "fas fa-baby-carriage", iconClr: "#00e5ff",
-          title: "Morabity 应用", problem: "母亲们很难快速安全地找到值得信赖的护理服务提供者。",
-          solution: "一个 Flutter 平台，通过实时聊天、详细档案和经过验证的列表连接母亲和护理提供者。",
-          results: ["+500次下载", "4.8★评分", "95%客户满意度", "匹配时间<10分钟"],
-          start: "2023年10月", end: "2024年1月", price: "$295", rating: "4.8 / 5",
-          desc: "Firebase Auth + Firestore + 实时聊天 + FCM 推送通知。从第一天起采用 GetX 架构。",
-          pills: ["Flutter", "Firebase", "GetX", "实时聊天", "FCM"]
+          id: 1, featured: true, tags: "flutter firebase", icon: "fas fa-shopping-cart", iconClr: "#00e5ff",
+          title: "电子商务应用", problem: "需要快速、可靠的购物体验及安全支付。",
+          solution: "功能齐全的购物应用，具有安全支付和现代界面。包括购物车、收藏和订单跟踪。",
+          results: ["10,000+ 活跃用户", "销售额增长35%", "现代UI"],
+          start: "2023年1月", end: "2023年6月", price: "$5,000", rating: "4.9 / 5",
+          desc: "完整的购物应用程序。取得了巨大成功，提供无缝的购物体验。",
+          pills: ["Flutter", "Firebase", "Stripe"]
         },
         {
-          id: 2, featured: false, tags: "flutter", icon: "fab fa-whatsapp", iconClr: "#25d366",
-          title: "WhatsApp 贴纸应用", problem: "一位艺术家希望用户一键将其数字贴纸以互动方式分发到 WhatsApp。",
-          solution: "带有 Native Android 集成的 Flutter 应用，直接将贴纸包添加到 WhatsApp。",
-          results: ["完整的WhatsApp集成", "流畅用户体验", "在Google Play上线"],
-          start: "2023年5月", end: "2023年7月", price: "$213", rating: "4.5 / 5",
-          desc: "flutter_whatsapp_stickers + 定制 Android 原生代码，实现无缝贴纸包添加。",
-          pills: ["Flutter", "Native Android", "WhatsApp API", "动画"]
+          id: 2, featured: false, tags: "flutter education", icon: "fas fa-graduation-cap", iconClr: "#25d366",
+          title: "互动学习平台", problem: "缺乏吸引儿童的教育应用。",
+          solution: "包含互动课程、测验和进度跟踪的儿童教育应用。",
+          results: ["5,000+ 儿童", "引人入胜的设计", "最佳教育应用奖"],
+          start: "2023年7月", end: "2023年12月", price: "$4,200", rating: "4.8 / 5",
+          desc: "综合教育应用程序，包含超过200个互动课程，将参与度提高了60%。",
+          pills: ["Flutter", "SQLite", "动画"]
         },
         {
-          id: 3, featured: false, tags: "flutter firebase", icon: "fas fa-heart", iconClr: "#f43f5e",
-          title: "亲情 (Sila) 应用", problem: "随着生活繁忙，家庭纽带减弱——人们忘记保持联系。",
-          solution: "一款发送智能家庭联系提醒并组织慈善捐赠的应用。",
-          results: ["对所有人免费", "智能提醒", "1000+用户"],
-          start: "2024年1月", end: "2024年2月", price: "免费", rating: "5.0 / 5",
-          desc: "Firebase 通知 + Firestore。作为个人慈善项目构建。",
-          pills: ["Flutter", "Firebase", "通知"]
+          id: 3, featured: false, tags: "flutter health", icon: "fas fa-dumbbell", iconClr: "#f43f5e",
+          title: "健身追踪应用", problem: "难以找到一个准确结合锻炼和饮食跟踪的专用应用程序。",
+          solution: "带有私人计划、计时器和进度图表的锻炼和营养跟踪器。",
+          results: ["15,000+ 用户", "智能手表同步", "全面分析"],
+          start: "2024年1月", end: "2024年4月", price: "$4,800", rating: "4.9 / 5",
+          desc: "先进的锻炼和营养应用程序，具有巨大的视频锻炼库。",
+          pills: ["Flutter", "Provider", "图表"]
         },
         {
-          id: 4, featured: false, tags: "flutter firebase getx", icon: "fas fa-chart-pie", iconClr: "#10b981",
-          title: "支出管理应用", problem: "人们不知道钱花在哪里——没有准确的日常支出跟踪。",
-          solution: "带有月度报告和交互式图表的 Flutter 收支跟踪应用。",
-          results: ["完整月度分析", "PDF报告", "简洁易用界面"],
-          start: "2024年5月", end: "2024年7月", price: "商业项目", rating: "4.8 / 5",
-          desc: "GetX + Firestore + fl_chart 交互式图表和月度摘要。",
-          pills: ["Flutter", "Firebase", "GetX", "图表"]
+          id: 4, featured: false, tags: "flutter firebase", icon: "fas fa-wallet", iconClr: "#10b981",
+          title: "支出管理应用", problem: "用户很难准确跟踪日常开支。",
+          solution: "Flutter 应用，帮助用户记录日常开支并生成详细月度报告。",
+          results: ["全面分析", "快速输入UI", "交互式图表"],
+          start: "2024年5月", end: "2024年7月", price: "$3,800", rating: "4.8 / 5",
+          desc: "使用 GetX 构建的专业支出跟踪器，注重易用性和整洁的 UI。",
+          pills: ["Flutter", "Firebase", "GetX"]
         },
         {
-          id: 5, featured: false, tags: "flutter education", icon: "fas fa-weight", iconClr: "#8b5cf6",
-          title: "BMI 计算器", problem: "大多数 BMI 计算器单调，没有清晰的用户界面或视觉反馈。",
-          solution: "一款根据 BMI 结果动态变色的健康应用，界面交互式。",
-          results: ["1000+评分", "Material 3设计", "日活跃用户"],
-          start: "2024年8月", end: "2024年9月", price: "个人项目", rating: "4.9 / 5",
-          desc: "自定义动画 + 动态颜色主题 + 精确的 WHO 计算。",
-          pills: ["Flutter", "Dart", "动画", "健康"]
+          id: 5, featured: false, tags: "flutter education health", icon: "fas fa-weight", iconClr: "#8b5cf6",
+          title: "BMI 计算器", problem: "大多数BMI应用界面无聊，没有量身定制的建议。",
+          solution: "立即计算 BMI 并提供建议和动态颜色变化的交互式应用程序。",
+          results: ["智能交互界面", "准确计算", "极高评价"],
+          start: "2024年8月", end: "2024年9月", price: "$1,200", rating: "4.9 / 5",
+          desc: "您的首选健康工具，根据国际标准准确确定您的身体状况。",
+          pills: ["Flutter", "Dart", "健康 API"]
         }
       ]
     };
 
     const SKILLS = {
       ar: [
-        { emoji: "📱", head: "تطوير الموبايل", num: "01", bars: [{ l: "Flutter", v: 95 }, { l: "Dart", v: 93 }, { l: "Firebase", v: 87 }, { l: "إدارة الحالة", v: 90 }], tags: ["GetX", "Bloc", "Provider", "REST API", "Clean Arch", "Supabase"] },
-        { emoji: "🗄", head: "البيانات والـ Backend", num: "02", bars: [{ l: "MySQL / SQL", v: 88 }, { l: "Firebase Firestore", v: 87 }, { l: "REST / JSON", v: 92 }, { l: "SQLite", v: 85 }], tags: ["SQLite", "Dio", "Hive", "Supabase", "Node.js"] },
-        { emoji: "🎨", head: "التصميم والأدوات", num: "03", bars: [{ l: "Figma", v: 85 }, { l: "Adobe XD", v: 80 }, { l: "Canva", v: 75 }], tags: ["Git", "VS Code", "Postman", "Material 3", "Jira"] },
-        { emoji: "🎓", head: "التدريس", num: "04", bars: [{ l: "تصميم المناهج", v: 93 }, { l: "الإرشاد التقني", v: 95 }, { l: "الإلقاء العام", v: 85 }], tags: ["العربية", "الإنجليزية", "القيادة", "حل المشكلات"] }
+        { emoji: "📱", head: "تطوير الموبايل", num: "01", bars: [{ l: "Flutter", v: 95 }, { l: "Dart", v: 90 }, { l: "Firebase", v: 85 }, { l: "State Mgmt", v: 90 }], tags: ["GetX", "Bloc", "Provider", "REST API", "Animations"] },
+        { emoji: "💻", head: "لغات البرمجة", num: "02", bars: [{ l: "JavaScript", v: 75 }, { l: "Python", v: 70 }, { l: "Java", v: 80 }, { l: "C++", v: 65 }], tags: ["OOP", "Data Structures", "Algorithms"] },
+        { emoji: "🎨", head: "التصميم والأدوات", num: "03", bars: [{ l: "UI/UX Design", v: 80 }, { l: "Git & GitHub", v: 85 }, { l: "Figma", v: 75 }], tags: ["Material 3", "Clean Architecture", "Version Control"] },
+        { emoji: "🎓", head: "التدريس والمهارات", num: "04", bars: [{ l: "تطوير المناهج", v: 90 }, { l: "التواصل", v: 95 }, { l: "الإرشاد والتوجيه", v: 88 }], tags: ["Kids Academy", "Mentoring", "Problem-Solving"] }
       ],
       en: [
-        { emoji: "📱", head: "Mobile Development", num: "01", bars: [{ l: "Flutter", v: 95 }, { l: "Dart", v: 93 }, { l: "Firebase", v: 87 }, { l: "State Management", v: 90 }], tags: ["GetX", "Bloc", "Provider", "REST API", "Clean Arch", "Supabase"] },
-        { emoji: "🗄", head: "Data & Backend", num: "02", bars: [{ l: "MySQL / SQL", v: 88 }, { l: "Firebase Firestore", v: 87 }, { l: "REST / JSON", v: 92 }, { l: "SQLite", v: 85 }], tags: ["SQLite", "Dio", "Hive", "Supabase", "Node.js"] },
-        { emoji: "🎨", head: "Design & Tools", num: "03", bars: [{ l: "Figma", v: 85 }, { l: "Adobe XD", v: 80 }, { l: "Canva", v: 75 }], tags: ["Git", "VS Code", "Postman", "Material 3", "Jira"] },
-        { emoji: "🎓", head: "Teaching", num: "04", bars: [{ l: "Curriculum Design", v: 93 }, { l: "Technical Mentoring", v: 95 }, { l: "Public Speaking", v: 85 }], tags: ["Arabic", "English", "Leadership", "Problem-Solving"] }
+        { emoji: "📱", head: "Mobile Dev", num: "01", bars: [{ l: "Flutter", v: 95 }, { l: "Dart", v: 90 }, { l: "Firebase", v: 85 }, { l: "State Mgmt", v: 90 }], tags: ["GetX", "Bloc", "Provider", "REST API", "Animations"] },
+        { emoji: "💻", head: "Programming", num: "02", bars: [{ l: "JavaScript", v: 75 }, { l: "Python", v: 70 }, { l: "Java", v: 80 }, { l: "C++", v: 65 }], tags: ["OOP", "Data Structures", "Algorithms"] },
+        { emoji: "🎨", head: "Design & Tools", num: "03", bars: [{ l: "UI/UX Design", v: 80 }, { l: "Git & GitHub", v: 85 }, { l: "Figma", v: 75 }], tags: ["Material 3", "Clean Architecture", "Version Control"] },
+        { emoji: "🎓", head: "Teaching Skills", num: "04", bars: [{ l: "Curriculum Dev", v: 90 }, { l: "Communication", v: 95 }, { l: "Mentoring", v: 88 }], tags: ["Kids Academy", "Mentoring", "Problem-Solving"] }
       ],
       zh: [
-        { emoji: "📱", head: "移动端开发", num: "01", bars: [{ l: "Flutter", v: 95 }, { l: "Dart", v: 93 }, { l: "Firebase", v: 87 }, { l: "状态管理", v: 90 }], tags: ["GetX", "Bloc", "Provider", "REST API", "Clean Arch", "Supabase"] },
-        { emoji: "🗄", head: "数据与后端", num: "02", bars: [{ l: "MySQL / SQL", v: 88 }, { l: "Firebase Firestore", v: 87 }, { l: "REST / JSON", v: 92 }, { l: "SQLite", v: 85 }], tags: ["SQLite", "Dio", "Hive", "Supabase", "Node.js"] },
-        { emoji: "🎨", head: "设计与工具", num: "03", bars: [{ l: "Figma", v: 85 }, { l: "Adobe XD", v: 80 }, { l: "Canva", v: 75 }], tags: ["Git", "VS Code", "Postman", "Material 3", "Jira"] },
-        { emoji: "🎓", head: "教学", num: "04", bars: [{ l: "课程设计", v: 93 }, { l: "技术辅导", v: 95 }, { l: "公开演讲", v: 85 }], tags: ["阿拉伯语", "英语", "领导力", "问题解决"] }
+        { emoji: "📱", head: "移动端开发", num: "01", bars: [{ l: "Flutter", v: 95 }, { l: "Dart", v: 90 }, { l: "Firebase", v: 85 }, { l: "状态管理", v: 90 }], tags: ["GetX", "Bloc", "Provider", "REST API"] },
+        { emoji: "💻", head: "编程语言", num: "02", bars: [{ l: "JavaScript", v: 75 }, { l: "Python", v: 70 }, { l: "Java", v: 80 }, { l: "C++", v: 65 }], tags: ["OOP", "数据结构", "算法"] },
+        { emoji: "🎨", head: "设计与工具", num: "03", bars: [{ l: "UI/UX 设计", v: 80 }, { l: "Git & GitHub", v: 85 }, { l: "Figma", v: 75 }], tags: ["Material 3", "Clean Architecture"] },
+        { emoji: "🎓", head: "教学与技能", num: "04", bars: [{ l: "课程开发", v: 90 }, { l: "沟通能力", v: 95 }, { l: "辅导与指导", v: 88 }], tags: ["儿童编程学院", "辅导", "问题解决"] }
       ]
     };
 
     const TESTIMONIALS = {
       ar: [
-        { featured: true, text: "محمود مش بس مطوّر — هو شريك حقيقي. فهم فكرتي من أول جلسة وسلّم تطبيق يتجاوز توقعاتي. الكود نظيف، الأداء رهيب، والتواصل ممتاز طول الرحلة.", rating: "★★★★★", name: "أحمد سمير", role: "صاحب تطبيق مربيتي", avatar: "أ" },
-        { featured: false, text: "شرحه للبرمجة مختلف تماماً. ما بين يديه مفاهيم معقدة تصبح بسيطة وممتعة. درست عنده 3 أشهر وخرجت ببرنامج Flutter حقيقي.", rating: "★★★★★", name: "سارة محمود", role: "طالبة Flutter — المنيا", avatar: "س" },
-        { featured: false, text: "حوّل موقعنا التقني بالكامل. التطبيق الجديد أسرع بـ 40% والمستخدمون أبدوا إعجابهم بشكل واضح. نتعامل معه في كل مشاريعنا الجديدة.", rating: "★★★★★", name: "شركة التقنية المتقدمة", role: "مدير المشاريع", avatar: "ش" },
-        { featured: false, text: "من أفضل المدرسين الذين تعاملت معهم. صبور، واضح، ويعطي اهتماماً كاملاً لكل طالب. شعرت أنه مهتم بنجاحي الحقيقي.", rating: "★★★★★", name: "عمر خالد", role: "طالب برمجة للأطفال", avatar: "ع" },
-        { featured: false, text: "أنجز المشروع في الوقت المحدد بجودة فوق المتوقع. المشكلات التقنية حلّها بسرعة مذهلة. بالتأكيد سأتعاون معه مرة أخرى.", rating: "★★★★☆", name: "نور إبراهيم", role: "مؤسسة ناشئة", avatar: "ن" }
+        { featured: true, text: "محمود مش بس مطوّر — هو شريك حقيقي. فهم فكرتي وسلّم تطبيق يتجاوز توقعاتي بفضل خبرته العميقة في واجهات المستخدم.", rating: "★★★★★", name: "عميل التجارة الإلكترونية", role: "صاحب تطبيق تسوق", avatar: "ت" },
+        { featured: false, text: "شرحه للبرمجة مختلف تماماً. ابني أصبح يحب كتابة الأكواد بفضل طريقته الممتعة والعملية في أكاديمية الأطفال.", rating: "★★★★★", name: "ولي أمر", role: "أكاديمية الأطفال للبرمجة", avatar: "و" },
+        { featured: false, text: "حوّل تطبيق اللياقة البدنية الخاص بنا بالكامل، التطبيق الجديد أسرع والمستخدمون أبدوا إعجابهم بالرسوم البيانية المدمجة.", rating: "★★★★★", name: "مدير مشروع رياضي", role: "تطبيق اللياقة البدنية", avatar: "م" }
       ],
       en: [
-        { featured: true, text: "Mahmoud isn't just a developer — he's a real partner. He understood my idea from the first session and delivered an app that exceeded my expectations. Clean code, amazing performance, excellent communication throughout.", rating: "★★★★★", name: "Ahmed Samir", role: "Morabity App Owner", avatar: "A" },
-        { featured: false, text: "His teaching approach is completely different. Complex concepts become simple and engaging in his hands. I studied with him for 3 months and built a real Flutter app.", rating: "★★★★★", name: "Sara Mahmoud", role: "Flutter Student — Minya", avatar: "S" },
-        { featured: false, text: "He completely transformed our technical stack. The new app is 40% faster and users have shown clear appreciation. We work with him on all our new projects.", rating: "★★★★★", name: "Advanced Tech Co.", role: "Project Manager", avatar: "T" },
-        { featured: false, text: "One of the best teachers I've worked with. Patient, clear, gives full attention to each student. I felt he genuinely cared about my real success.", rating: "★★★★★", name: "Omar Khaled", role: "Kids Programming Student", avatar: "O" },
-        { featured: false, text: "Delivered the project on time with quality above expectations. He solved technical problems with amazing speed. I'll definitely collaborate with him again.", rating: "★★★★☆", name: "Nour Ibrahim", role: "Startup Founder", avatar: "N" }
+        { featured: true, text: "Mahmoud isn't just a developer — he's a real partner. He understood my idea and delivered an app that exceeded expectations with deep UI expertise.", rating: "★★★★★", name: "E-commerce Client", role: "App Owner", avatar: "C" },
+        { featured: false, text: "His teaching approach is completely different. My son loves coding now thanks to his fun and practical method at Kids' Academy.", rating: "★★★★★", name: "Parent", role: "Kids' Academy", avatar: "P" },
+        { featured: false, text: "He completely transformed our fitness app. The new app is faster and users really appreciated the integrated charts.", rating: "★★★★★", name: "Sports Project Manager", role: "Fitness App", avatar: "M" }
       ],
       zh: [
-        { featured: true, text: "Mahmoud 不只是一个开发者——他是真正的合作伙伴。他在第一次会议就理解了我的想法，并交付了超出我预期的应用。代码简洁，性能卓越，全程沟通出色。", rating: "★★★★★", name: "Ahmed Samir", role: "Morabity 应用所有者", avatar: "A" },
-        { featured: false, text: "他的教学方法完全不同。复杂的概念在他手中变得简单有趣。我跟他学了3个月，构建了一个真实的 Flutter 应用。", rating: "★★★★★", name: "Sara Mahmoud", role: "Flutter学员 — 米尼亚", avatar: "S" },
-        { featured: false, text: "他彻底改变了我们的技术栈。新应用速度提升40%，用户明显表示满意。我们所有的新项目都与他合作。", rating: "★★★★★", name: "先进科技公司", role: "项目经理", avatar: "T" },
-        { featured: false, text: "他是我合作过的最好的老师之一。耐心、清晰，对每位学生都给予充分关注。我感觉他真正关心我的成功。", rating: "★★★★★", name: "Omar Khaled", role: "儿童编程学员", avatar: "O" },
-        { featured: false, text: "按时交付，质量超出预期。他以惊人的速度解决了技术问题。我肯定会再次与他合作。", rating: "★★★★☆", name: "Nour Ibrahim", role: "创业公司创始人", avatar: "N" }
+        { featured: true, text: "Mahmoud 不仅仅是一名开发人员——他是真正的合作伙伴。凭借深厚的UI专业知识，他交付了超出预期的应用程序。", rating: "★★★★★", name: "电商客户", role: "应用所有者", avatar: "C" },
+        { featured: false, text: "他的教学方法完全不同。多亏了他在儿童学院有趣实用的方法，我儿子现在很喜欢编程。", rating: "★★★★★", name: "家长", role: "儿童编程学院", avatar: "P" },
+        { featured: false, text: "他彻底改造了我们的健身应用程序。新应用程序速度更快，用户非常欣赏集成的图表。", rating: "★★★★★", name: "体育项目经理", role: "健身应用", avatar: "M" }
       ]
     };
 
     const TEACHING = {
       ar: [
-        { first: true, icon: "📱", title: "Flutter والموبايل", desc: "رحلة Flutter الكاملة من Dart حتى نشر التطبيق. 100% عملي — الطلاب يخرجون بتطبيقات في أيديهم.", badge: "+100 طالب" },
-        { first: false, icon: "🤖", title: "الروبوتيكس وأردوينو", desc: "روبوتيكس عملي لـ 10-18 عاماً. يبنون روبوتات حقيقية ويتعلمون التفكير الحوسبي.", badge: "+80 مهندس شاب" },
-        { first: false, icon: "🗄️", title: "قواعد البيانات وSQL", desc: "من ER إلى SQL الإنتاجي. الطلاب يخرجون قادرين على قواعد بيانات حقيقية.", badge: "+120 شهادة" },
-        { first: false, icon: "💡", title: "أساسيات البرمجة", desc: "من الصفر للاحتراف. منطق، خوارزميات، OOP — الأساس الذي يحتاجه كل مطوّر.", badge: "تسجيل مفتوح" }
+        { first: true, icon: "💻", title: "أساسيات البرمجة", desc: "تعليم أساسيات البرمجة (المتغيرات، الحلقات، الدوال) بأسلوب ممتع للأطفال.", badge: "أكاديمية الأطفال" },
+        { first: false, icon: "📱", title: "تطبيقات الموبايل", desc: "تطوير تطبيقات الموبايل باستخدام Flutter للمبتدئين لبناء ثقتهم التقنية.", badge: "+200 طالب" },
+        { first: false, icon: "🧩", title: "التفكير المنطقي", desc: "تنمية مهارات حل المشكلات والتفكير المنطقي خطوة بخطوة للجيل الجديد.", badge: "منهج عملي" },
+        { first: false, icon: "🎨", title: "أساسيات UI", desc: "تعلم أساسيات تصميم واجهة المستخدم لبناء تطبيقات جميلة وجذابة بصرياً.", badge: "مشاريع عملية" }
       ],
       en: [
-        { first: true, icon: "📱", title: "Flutter & Mobile", desc: "Complete Flutter journey from Dart to App Store launch. 100% hands-on — students graduate with real apps.", badge: "100+ students" },
-        { first: false, icon: "🤖", title: "Robotics & Arduino", desc: "Hands-on robotics for ages 10–18. Building real robots and learning computational thinking through hardware.", badge: "80+ young engineers" },
-        { first: false, icon: "🗄️", title: "Databases & SQL", desc: "From ER diagrams to production SQL. Students leave able to design and run real database systems.", badge: "120+ certified" },
-        { first: false, icon: "💡", title: "Programming Fundamentals", desc: "Zero to hero. Logic, algorithms, OOP — the foundation every developer needs before any framework.", badge: "Open enrollment" }
+        { first: true, icon: "💻", title: "Programming Basics", desc: "Teaching basic programming (variables, loops, functions) in a fun way for kids.", badge: "Kids' Academy" },
+        { first: false, icon: "📱", title: "Mobile Dev", desc: "Mobile app development with Flutter for beginners to build tech confidence.", badge: "200+ Students" },
+        { first: false, icon: "🧩", title: "Logical Thinking", desc: "Developing problem-solving and logical thinking skills step-by-step.", badge: "Hands-on" },
+        { first: false, icon: "🎨", title: "UI Basics", desc: "Learning User Interface design basics to build beautiful, appealing apps.", badge: "Projects" }
       ],
       zh: [
-        { first: true, icon: "📱", title: "Flutter & 移动开发", desc: "从 Dart 基础到 App Store 上线的完整 Flutter 之旅。100% 实践教学——学员毕业时手中有真实应用。", badge: "100+学员" },
-        { first: false, icon: "🤖", title: "机器人 & Arduino", desc: "面向10-18岁的实用机器人课程。构建真实机器人，通过硬件学习计算思维。", badge: "80+青年工程师" },
-        { first: false, icon: "🗄️", title: "数据库 & SQL", desc: "从 ER 图到生产 SQL。学员离开时能够设计和运行真实的数据库系统。", badge: "120+已认证" },
-        { first: false, icon: "💡", title: "编程基础", desc: "从零到精通。逻辑、算法、OOP——每位开发者在任何框架之前都需要的基础。", badge: "开放报名" }
+        { first: true, icon: "💻", title: "编程基础", desc: "以有趣的方式向孩子们教授基础编程（变量、循环、函数）。", badge: "儿童学院" },
+        { first: false, icon: "📱", title: "移动开发", desc: "针对初学者的 Flutter 移动应用开发，以建立技术信心。", badge: "200+学员" },
+        { first: false, icon: "🧩", title: "逻辑思维", desc: "逐步培养解决问题和逻辑思维的能力。", badge: "实践方法" },
+        { first: false, icon: "🎨", title: "UI 基础", desc: "学习用户界面设计基础，构建美观吸引人的应用。", badge: "实践项目" }
       ]
     };
 
     const TL = {
       ar: [
-        { side: "l", year: "2024 — الحاضر", role: "مطوّر Flutter أول", org: "مستقل / الشرق الأوسط وشمال أفريقيا", desc: "بناء تطبيقات Flutter للعملاء على مستوى الإنتاج. قيادة قرارات البنية، تسليم سريع، جودة كود تحت الضغط." },
-        { side: "r", year: "2022 — 2024", role: "Flutter Developer", org: "Software House — Minya, Egypt", desc: "Shipped multiple cross-platform apps. Established mobile architecture standards and code review culture." },
-        { side: "l", year: "2020 — 2022", role: "مدرّس روبوتيكس وبرمجة", org: "مركز التكنولوجيا التعليمية", desc: "تصميم وتقديم مناهج روبوتيكس وبرمجة للشباب. قيادة فرق الطلاب في المسابقات الإقليمية." },
-        { side: "r", year: "2018 — 2020", role: "CS Studies & First Projects", org: "University — Egypt", desc: "Programming fundamentals, data structures, databases. Built first mobile apps. Discovered the tech-education intersection." }
+        { side: "l", year: "2023 — الحاضر", role: "مطوّر Flutter مستقل", org: "عمل حر", desc: "تطوير تطبيقات احترافية للعملاء مثل التجارة الإلكترونية واللياقة البدنية، من الفكرة إلى متجري Apple و Google." },
+        { side: "r", year: "2021 — الحاضر", role: "مدرّس برمجة", org: "أكاديمية الأطفال للبرمجة", desc: "تدريس أساسيات البرمجة وتطوير الموبايل للأطفال والمراهقين، وبناء منهج يركز على التطبيق العملي." },
+        { side: "l", year: "2020 — 2021", role: "البدايات والمشاريع الأولى", org: "مرحلة التعلم والتأسيس", desc: "دراسة لغات البرمجة المتعددة (Java, Python, JS) وتطوير أول تطبيقات فعلية باستخدام Flutter و Firebase." }
       ],
       en: [
-        { side: "l", year: "2024 — Present", role: "Senior Flutter Developer", org: "Freelance / MENA Region", desc: "Building production-grade Flutter apps for clients. Leading architecture decisions, shipping fast, maintaining quality under pressure." },
-        { side: "r", year: "2022 — 2024", role: "Flutter Developer", org: "Software House — Minya, Egypt", desc: "Shipped multiple cross-platform apps. Established mobile architecture standards and built a code review culture." },
-        { side: "l", year: "2020 — 2022", role: "Robotics & Programming Instructor", org: "Educational Technology Center", desc: "Designed and delivered robotics and programming curriculum for youth. Led student teams in regional competitions." },
-        { side: "r", year: "2018 — 2020", role: "CS Studies & First Projects", org: "University — Egypt", desc: "Programming fundamentals, data structures, databases, algorithms. Built first mobile apps. Discovered the intersection of technology and education." }
+        { side: "l", year: "2023 — Present", role: "Freelance Flutter Developer", org: "Self-Employed", desc: "Developing professional apps like E-commerce and Fitness for clients, from idea to Apple & Google stores." },
+        { side: "r", year: "2021 — Present", role: "Programming Instructor", org: "Kids' Programming Academy", desc: "Teaching coding basics and mobile dev to kids/teens, building a curriculum focused on practical application." },
+        { side: "l", year: "2020 — 2021", role: "Beginnings & First Projects", org: "Learning Phase", desc: "Studying multiple languages (Java, Python, JS) and developing first real apps using Flutter and Firebase." }
       ],
       zh: [
-        { side: "l", year: "2024 — 至今", role: "高级 Flutter 开发者", org: "自由职业 / 中东北非", desc: "为客户构建生产级 Flutter 应用。主导架构决策，快速交付，在压力下保持代码质量。" },
-        { side: "r", year: "2022 — 2024", role: "Flutter 开发者", org: "软件公司 — 埃及米尼亚", desc: "发布多个跨平台应用。建立移动架构标准和代码审查文化。" },
-        { side: "l", year: "2020 — 2022", role: "机器人 & 编程讲师", org: "教育技术中心", desc: "为青少年设计并交付机器人和编程课程。带领学生参加区域竞赛。" },
-        { side: "r", year: "2018 — 2020", role: "计算机科学学习 & 初期项目", org: "大学 — 埃及", desc: "编程基础、数据结构、数据库和算法。构建第一批移动应用，发现技术与教育的交汇。" }
+        { side: "l", year: "2023 — 至今", role: "自由 Flutter 开发者", org: "自由职业", desc: "为客户开发专业的电子商务和健身应用，从构思到上线 Apple 和 Google 商店。" },
+        { side: "r", year: "2021 — 至今", role: "编程讲师", org: "儿童编程学院", desc: "向儿童和青少年教授编程基础和移动开发，构建注重实际应用的课程。" },
+        { side: "l", year: "2020 — 2021", role: "起步与初期项目", org: "学习阶段", desc: "学习多种语言 (Java, Python, JS) 并使用 Flutter 和 Firebase 开发首批真实的应用程序。" }
       ]
     };
 
@@ -3989,7 +1731,7 @@
       <div class="cs-img">
         <div class="cs-img-placeholder"><i class="${p.icon}" style="color:${p.iconClr}"></i></div>
         <div class="cs-overlay">
-          <button class="cs-overlay-btn" onclick="openModal(${p.id})">${lang === 'ar' ? 'عرض الدراسة' : lang === 'zh' ? '查看详情' : 'View Case Study'}</button>
+          <button class="cs-overlay-btn" onclick="openModal(${p.id})">${lang === 'ar' ? 'عرض تفاصيل المشروع' : lang === 'zh' ? '查看详情' : 'View Project Details'}</button>
         </div>
       </div>
       <div class="cs-body">
